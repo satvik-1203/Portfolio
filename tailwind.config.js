@@ -248,6 +248,7 @@ module.exports = {
     },
     fontFamily: {
       sans: [
+        "Poppins",
         "Roboto",
         "ui-sans-serif",
         "system-ui",

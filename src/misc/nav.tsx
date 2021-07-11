@@ -13,3 +13,22 @@ export const Rectangle = () => (
     </svg>
   </nav>
 );
+
+export interface INavOption {
+  id: number;
+  name: string;
+  path: string;
+}
+
+export const navOption: INavOption[] = [
+  {
+    id: 1,
+    name: "Home",
+    path: "/",
+  },
+  {
+    id: 2,
+    name: "Contact",
+    path: "/contact",
+  },
+];
