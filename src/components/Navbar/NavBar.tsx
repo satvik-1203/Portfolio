@@ -28,7 +28,7 @@ const NavBar: React.FC<Props> = ({ openState }) => {
 
   return (
     <nav className="navBar flex justify-between items-center px-10 bg-black fixed top-0 left-0 right-0 h-20">
-      <div className="text-white  not-italic font-normal text-3xl">Satvik</div>
+      <div className="text-white  font-normal text-3xl">Satvik</div>
       <motion.div
         className="hamburger flex flexCol space-y-1"
         onClick={() => setOpen((prev) => !prev)}
