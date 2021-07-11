@@ -6,7 +6,7 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "build:css": "postcss src/styles/tailwind.scss -o src/styles/main.scss",
-    "watch:css": "postcss src/styles/tailwind.scss -w src/styles/main.scss"
+    "watch:css": "postcss src/styles/tailwind.scss -o src/styles/main.scss"
   },
   "dependencies": {
     "framer-motion": "^4.1.17",
