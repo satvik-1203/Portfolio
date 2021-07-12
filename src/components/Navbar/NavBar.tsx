@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Rectangle } from "../../misc/nav";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface Props {
   openState: [boolean, React.Dispatch<React.SetStateAction<boolean>>];
@@ -27,7 +28,7 @@ const NavBar: React.FC<Props> = ({ openState }) => {
   const [open, setOpen] = openState;
 
   return (
-    <nav className="navBar flex justify-between items-center px-10 bg-black fixed top-0 left-0 right-0 h-20">
+    <nav className="navBar z-50 flex justify-between items-center px-10 bg-black fixed top-0 left-0 right-0 h-20">
       <div className="text-white  font-normal text-3xl">Satvik</div>
       <motion.div
         className="hamburger flex flexCol space-y-1"

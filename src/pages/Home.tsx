@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Home = () => {
   const [open, setOpen] = useState<boolean>(false);
-
+  const handleOpen = () => setOpen((prev) => !prev);
   return (
     <div>
       <NavBar openState={[open, setOpen]} />
@@ -16,7 +16,7 @@ const Home = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 1 } }}
           >
-            <NavDropBox />
+            <NavDropBox handleOpen={handleOpen} />
           </motion.div>
         )}
       </AnimatePresence>

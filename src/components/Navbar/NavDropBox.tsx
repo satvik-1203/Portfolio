@@ -1,7 +1,7 @@
 import React from "react";
 import { navOption } from "../../misc/nav";
 import NavOption from "./NavOption";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 const dropBoxAnimation = {
   initial: {
@@ -21,10 +21,14 @@ const dropBoxAnimation = {
   },
 };
 
-const NavDropBox = () => {
+interface Props {
+  handleOpen: () => void;
+}
+
+const NavDropBox: React.FC<Props> = ({ handleOpen }) => {
   return (
     <motion.div
-      className="h-screen px-10 py-3 pt-20  text-white overflow-hidden"
+      className=" px-10 py-3 pt-20  text-white overflow-hidden h-screen"
       style={{ backgroundColor: "#181818" }}
     >
       <div>
@@ -35,7 +39,9 @@ const NavDropBox = () => {
           exit="exit"
         >
           {navOption.map((option) => (
-            <NavOption key={option.id} navOption={option} />
+            <div key={option.id} onClick={handleOpen}>
+              <NavOption navOption={option} />
+            </div>
           ))}
         </motion.div>
       </div>

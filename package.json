@@ -4,9 +4,7 @@
   "scripts": {
     "dev": "  vite",
     "build": "tsc && vite build",
-    "serve": "vite preview",
-    "build:css": "postcss src/styles/tailwind.scss -o src/styles/main.scss",
-    "watch:css": "postcss src/styles/tailwind.scss -o src/styles/main.scss -w --verbose"
+    "serve": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/jit": "0.1.15",
