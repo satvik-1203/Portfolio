@@ -1,15 +1,14 @@
 import React from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
-import { HomeCurve } from "../misc/icons";
+import { motion, useViewportScroll } from "framer-motion";
+import { HomeCurve, Progress } from "../misc/icons";
 import HomeMain from "../components/Home/HomeMain";
 import AboutMe from "../components/Home/AboutMe";
 
 const Home = () => {
-  const { scrollY } = useViewportScroll();
-
+  const { scrollYProgress } = useViewportScroll();
   return (
     <motion.div
-      className="background -z-10"
+      className="homeContainer background -z-10"
       style={{ backgroundColor: "#181818" }}
     >
       <div className="relative">
@@ -17,8 +16,13 @@ const Home = () => {
         <motion.div className="absolute top-20 rotate-180 ">
           <HomeCurve />
         </motion.div>
+        <motion.div className="fixed left-4 bottom-4">
+          <Progress scrollYProgress={scrollYProgress} />
+        </motion.div>
       </div>
-      <AboutMe />
+      <div id="about">
+        <AboutMe />
+      </div>
     </motion.div>
   );
 };

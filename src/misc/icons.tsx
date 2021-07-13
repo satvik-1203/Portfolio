@@ -1,4 +1,5 @@
-import React from "react";
+import { motion, MotionValue } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 export const HomeCurve = () => (
   <svg
@@ -18,3 +19,45 @@ export const HomeCurve = () => (
     />
   </svg>
 );
+interface ProgressProps {
+  scrollYProgress: MotionValue<number>;
+}
+export const Progress: React.FC<ProgressProps> = ({ scrollYProgress }) => {
+  const [tick, setTick] = useState(false);
+  useEffect(() => {
+    scrollYProgress.onChange((latest) => {
+      if (latest == 1) {
+        setTick(true);
+      } else {
+        setTick(false);
+      }
+    });
+  }, []);
+  return (
+    <svg className="progress-icon" width="90" height="90" viewBox="0 0 60 60">
+      <motion.path
+        stroke="#6D27D9"
+        fill="none"
+        strokeWidth="5"
+        strokeDasharray="0 1"
+        d="M 0, 20 a 20, 20 0 1,0 40,0 a 20, 20 0 1,0 -40,0"
+        style={{
+          pathLength: scrollYProgress,
+          rotate: 90,
+          translateX: 5,
+          translateY: 5,
+          scaleX: -1,
+        }}
+      />
+      <motion.path
+        fill="none"
+        strokeWidth="3"
+        stroke="white"
+        d="M14,26 L 22,33 L 35,16"
+        initial={false}
+        strokeDasharray="0 1"
+        animate={{ pathLength: tick ? 1 : 0 }}
+      />
+    </svg>
+  );
+};

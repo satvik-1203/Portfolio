@@ -1,15 +1,16 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
 import Home from "./Home";
 import NavBar from "./NavBar";
 import { motion, useMotionValue, useViewportScroll } from "framer-motion";
 
 const index = () => {
-  const pageRef = useRef<HTMLDivElement>(null);
-
+  const [open, setOpen] = useState(false);
   return (
-    <motion.div>
-      <NavBar />
+    <motion.div
+      className={` overflow-hidden ${open && "overflow-hidden h-screen"}`}
+    >
+      <NavBar openState={[open, setOpen]} />
       <main>
         <Switch>
           <Route path="/" exact>

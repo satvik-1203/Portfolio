@@ -10,6 +10,7 @@
 .flexCol {
   flex-direction: column;
 }
-.scrollUp {
-  transform: translate3d(0, -100%, 0);
+
+html {
+  scroll-behavior: smooth;
 }
