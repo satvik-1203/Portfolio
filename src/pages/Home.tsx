@@ -1,27 +1,39 @@
-import React, { useState } from "react";
-import NavBar from "../components/Navbar/NavBar";
-import NavDropBox from "../components/Navbar/NavDropBox";
-import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { HomeCurve } from "../misc/icons";
+import HomeMain from "../components/Home/HomeMain";
+import AboutMe from "../components/Home/AboutMe";
 
 const Home = () => {
-  const [open, setOpen] = useState<boolean>(false);
-  const handleOpen = () => setOpen((prev) => !prev);
+  const { scrollY } = useViewportScroll();
+
   return (
-    <div>
-      <NavBar openState={[open, setOpen]} />
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            key={1}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0, transition: { duration: 1 } }}
-          >
-            <NavDropBox handleOpen={handleOpen} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+    <motion.div
+      className="background -z-10"
+      style={{ backgroundColor: "#181818" }}
+    >
+      <div className="relative">
+        <HomeMain />
+        <motion.div className="absolute top-20 rotate-180 ">
+          <HomeCurve />
+        </motion.div>
+      </div>
+      <AboutMe />
+    </motion.div>
   );
 };
 
 export default Home;
+
+{
+  /* <div className="about text-xs mt-4 text-gray-300">
+          GitHub:{" "}
+          <a
+            target="_blank"
+            className="text-blue-500 underline"
+            href="https://github.com/satvik-1203"
+          >
+            https://github.com/satvik-1203
+          </a>
+        </div> */
+}

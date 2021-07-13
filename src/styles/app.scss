@@ -4,8 +4,12 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
 .flexCol {
   flex-direction: column;
+}
+.scrollUp {
+  transform: translate3d(0, -100%, 0);
 }
