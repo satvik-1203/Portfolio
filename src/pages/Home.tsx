@@ -1,11 +1,11 @@
 import React from "react";
 import { motion, useViewportScroll } from "framer-motion";
 import { HomeCurve, Progress } from "../misc/icons";
+import Skills from "../components/Home/Skills";
 import HomeMain from "../components/Home/HomeMain";
 import AboutMe from "../components/Home/AboutMe";
 
 const Home = () => {
-  const { scrollYProgress } = useViewportScroll();
   return (
     <motion.div
       className="homeContainer background -z-10"
@@ -17,12 +17,15 @@ const Home = () => {
           <HomeCurve />
         </motion.div>
         <motion.div className="fixed left-4 bottom-4">
-          <Progress scrollYProgress={scrollYProgress} />
+          <Progress />
         </motion.div>
       </div>
-      <div id="about">
-        <AboutMe />
-      </div>
+
+      <div className="absolute" id="about" />
+      <AboutMe />
+
+      <Skills />
+      <div className="h-16"></div>
     </motion.div>
   );
 };

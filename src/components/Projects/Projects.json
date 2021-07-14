@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Spotify Clone",
+    "language": "JavaScript",
+    "description": [
+      "This is a Spotify Clone using MERN stack.",
+      "Used Spotify API and SDK to receive and play songs",
+      "OAuth 2.0"
+    ],
+    "link": "https://github.com/satvik-1203/spotifyCloneFrontend"
+  },
+  {
+    "id": 2,
+    "name": "Chat App",
+    "language": "Typescript",
+    "description": [
+      "A chat app using MERN stack and web sockets for real tme chatting",
+      "Used figma for complete backend and frontend prototyping"
+    ],
+    "link": "https://github.com/shah1012/Typescript-Chat-App-Frontend/tree/sockets"
+  },
+  {
+    "id": 3,
+    "name": "CLI Todo App",
+    "language": "Typescript",
+    "description": [
+      "A simple todo Application using the CLI and used Users.json and Todos.json for storing the data of users' credentials",
+      "User authenticated with JWT tokens"
+    ],
+    "link": "https://github.com/thehackingschool/THSCohortE-2021-Satvik/tree/main/Phase2/fs-db-ref"
+  },
+  {
+    "id": 4,
+    "name": "Personal Portfolio",
+    "language": "Typescript",
+    "description": [
+      "Personal portfolio using React, Framer-motion and Tailwind-CSS"
+    ],
+    "link": "https://github.com/satvik-1203/Portfolio"
+  }
+]

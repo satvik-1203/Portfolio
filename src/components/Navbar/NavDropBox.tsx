@@ -16,7 +16,7 @@ const dropBoxAnimation = {
     },
   },
   exit: {
-    x: "-100%",
+    x: "-50%",
     opacity: 0,
     transition: {
       duration: 0.75,

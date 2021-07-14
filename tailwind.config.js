@@ -10,9 +10,16 @@ module.exports = {
       xs: "425px",
       ...defaultTheme.screens,
     },
+
     extend: {
+      fontFamily: {
+        cMono: "'DM Mono', 'monospace'",
+      },
       zIndex: {
         "-10": "-10",
+      },
+      textColor: {
+        primary: "#B6B6B6",
       },
     },
   },

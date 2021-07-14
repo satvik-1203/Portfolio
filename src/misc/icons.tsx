@@ -1,4 +1,9 @@
-import { motion, MotionValue } from "framer-motion";
+import {
+  motion,
+  MotionValue,
+  useTransform,
+  useViewportScroll,
+} from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 export const HomeCurve = () => (
@@ -6,7 +11,7 @@ export const HomeCurve = () => (
     className="xs:hidden "
     width="100vw"
     height="294"
-    viewBox="0 0 375 294"
+    viewBox="0 0 375 250"
     fill="#6D28D9"
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -19,20 +24,14 @@ export const HomeCurve = () => (
     />
   </svg>
 );
-interface ProgressProps {
-  scrollYProgress: MotionValue<number>;
-}
-export const Progress: React.FC<ProgressProps> = ({ scrollYProgress }) => {
+
+export const Progress: React.FC = () => {
+  const { scrollYProgress } = useViewportScroll();
+  const yRange = useTransform(scrollYProgress, [0, 0.9], [0, 1]);
+
   const [tick, setTick] = useState(false);
-  useEffect(() => {
-    scrollYProgress.onChange((latest) => {
-      if (latest == 1) {
-        setTick(true);
-      } else {
-        setTick(false);
-      }
-    });
-  }, []);
+
+  useEffect(() => yRange.onChange((v) => setTick(v >= 1)), [yRange]);
   return (
     <svg className="progress-icon" width="90" height="90" viewBox="0 0 60 60">
       <motion.path

@@ -28,6 +28,11 @@ export const navOption: INavOption[] = [
   },
   {
     id: 2,
+    name: "Projects",
+    path: "/projects",
+  },
+  {
+    id: 3,
     name: "Contact",
     path: "/contact",
   },

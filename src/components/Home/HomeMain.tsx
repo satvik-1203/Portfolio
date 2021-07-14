@@ -15,20 +15,22 @@ const HomeMain = () => {
       ref={element as any}
       variants={fade}
       animate={controls as any}
-      className=" relative h-screen z-10 px-14 text-white flex flex-col justify-center "
+      className=" relative h-screen z-10 px-10 text-white flex flex-col justify-center "
     >
       <div className="overflow-hidden">
         <motion.div
-          initial={{ x: "-150%" }}
+          initial={{ x: "-80%" }}
           animate={{
             x: 0,
             opacity: [0, 0.2, 0.7, 1],
             transition: { duration: 1.8 },
           }}
-          className="hero  font-bold text-4xl z-10 tracking-wide  leading-8 "
+          className="hero  font-bold text-4xl z-10 tracking-wide pt-1 leading-7 "
         >
-          Hello, <br />
-          <span className="text-2xl text-white">This is Satvik :&#x00029;</span>
+          This is Satvik, <br />
+          <span className="text-base text-white">
+            A full stack MERN developer :&#x00029;
+          </span>
         </motion.div>
       </div>
       <motion.div
