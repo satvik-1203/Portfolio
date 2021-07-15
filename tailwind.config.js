@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     sans: ["Poppins"],
     screens: {
-      xs: "425px",
+      xs: "448px",
       ...defaultTheme.screens,
     },
 
@@ -17,6 +17,9 @@ module.exports = {
       },
       zIndex: {
         "-10": "-10",
+      },
+      colors: {
+        blackBg: "#181818",
       },
       textColor: {
         primary: "#B6B6B6",

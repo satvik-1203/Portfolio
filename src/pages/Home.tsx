@@ -13,7 +13,7 @@ const Home = () => {
     >
       <div className="relative">
         <HomeMain />
-        <motion.div className="absolute top-20 rotate-180 ">
+        <motion.div className="absolute top-[4rem] left-0 rotate-180 ">
           <HomeCurve />
         </motion.div>
         <motion.div className="fixed left-4 bottom-4">

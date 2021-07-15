@@ -16,10 +16,6 @@ const AboutMe = () => {
         <div className=" w-9/12 h-1 bg-purple-700 "></div>
       </div>
       <main className="pt-10 px-10">
-        <p className="text-xs text-primary">
-          Hello, This is Satvik and really big thanks for taking your time off
-          to read this.
-        </p>
         <section className="mt-6">
           <h2 className="text-white text-2xl">whoami</h2>
           <p className="text-xs text-primary mt-1">

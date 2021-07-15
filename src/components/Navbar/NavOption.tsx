@@ -7,6 +7,11 @@ import { useLocation } from "react-router-dom";
 interface Props {
   navOption: INavOption;
 }
+const lineAnimation = {
+  initial: { width: 0 },
+  animate: { width: "70%", transition: { duration: 1, delay: 1 } },
+  exit: { width: "0", transition: { duration: 0.3 } },
+};
 
 const NavOption: React.FC<Props> = ({ navOption }) => {
   const location = useLocation();
@@ -26,9 +31,10 @@ const NavOption: React.FC<Props> = ({ navOption }) => {
       </Link>
       <motion.div
         className="line block  h-1 rounded-full bg-purple-700 "
-        initial={{ width: 0 }}
-        animate={{ width: "70%", transition: { duration: 1, delay: 1 } }}
-        exit={{ width: "0", transition: { duration: 0.3 } }}
+        variants={lineAnimation}
+        initial="initial"
+        animate="animate"
+        exit="exit"
       ></motion.div>
     </div>
   );

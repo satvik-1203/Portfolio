@@ -16,7 +16,7 @@
     "language": "Typescript",
     "description": [
       "A chat app using MERN stack and web sockets for real tme chatting",
-      "Used figma for complete backend and frontend prototyping"
+      "Used Figma for complete backend and frontend prototyping"
     ],
     "link": "https://github.com/shah1012/Typescript-Chat-App-Frontend/tree/sockets"
   },
@@ -35,8 +35,18 @@
     "name": "Personal Portfolio",
     "language": "Typescript",
     "description": [
-      "Personal portfolio using React, Framer-motion and Tailwind-CSS"
+      "Personal portfolio using React, Framer-motion and Tailwind-CSS",
+      "Used Figma for prototyping"
     ],
     "link": "https://github.com/satvik-1203/Portfolio"
+  },
+  {
+    "id": 5,
+    "name": "Discord bot",
+    "language": "JavaScript",
+    "description": [
+      "A simple discord bot using discordJS API to play around with friends in the discord server "
+    ],
+    "link": "https://github.com/satvik-1203/pikachu-bot"
   }
 ]
