@@ -1,9 +1,4 @@
-import {
-  motion,
-  MotionValue,
-  useTransform,
-  useViewportScroll,
-} from "framer-motion";
+import { motion, useTransform, useViewportScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 export const HomeCurve = () => (
@@ -60,3 +55,19 @@ export const Progress: React.FC = () => {
     </svg>
   );
 };
+
+export const SmCurve = () => (
+  <svg
+    className="hidden xs:block"
+    width="1006"
+    height="443"
+    viewBox="0 0 1006 443"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M459.348 242.595C783.847 191.364 958.991 59.5187 1006 0L0 0V443C17.9083 397.545 134.85 293.827 459.348 242.595Z"
+      fill="#6D28D9"
+    />
+  </svg>
+);

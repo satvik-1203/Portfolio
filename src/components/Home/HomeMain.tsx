@@ -15,7 +15,7 @@ const HomeMain = () => {
       ref={element as any}
       variants={fade}
       animate={controls as any}
-      className=" relative h-screen z-10 px-10 text-white flex flex-col justify-center "
+      className=" relative h-screen z-10 px-10 text-white flex flex-col justify-center sm:justify-start sm:pt-[14rem] "
     >
       <div className="overflow-hidden">
         <motion.div
@@ -25,7 +25,7 @@ const HomeMain = () => {
             opacity: [0, 0.2, 0.7, 1],
             transition: { duration: 1.8 },
           }}
-          className="hero  font-bold text-4xl z-10 tracking-wide pt-1 leading-7 "
+          className="hero  font-bold text-4xl md:text-6xl z-10 tracking-wide pt-1 leading-7 md:leading-7 md:mt-3 "
         >
           This is Satvik, <br />
           <span className="text-base text-white">
@@ -37,18 +37,20 @@ const HomeMain = () => {
         variants={animation}
         initial="initial"
         animate="animate"
-        className="text-xs mt-3 text-gray-400  "
+        className="text-xs mt-3 text-gray-300  "
       >
         I have a class, so please don't show me C.
       </motion.div>
-      <motion.button
-        variants={animation}
-        initial="initial"
-        animate="animate"
-        className="mt-4 transform w-2/5  px-3 py-1 z-10 border-2 border-purple-700 transition-all duration-700 rounded-lg"
-      >
-        <a href="#about">About Me</a>
-      </motion.button>
+      <a href="#about">
+        <motion.button
+          variants={animation}
+          initial="initial"
+          animate="animate"
+          className="mt-4 max-w-[10rem] transform w-2/5 sm:w-1/5 px-3 py-1 z-10 border-2 border-purple-700 transition-all duration-700 rounded-lg  sm:border-white"
+        >
+          About Me
+        </motion.button>
+      </a>
     </motion.section>
   );
 };

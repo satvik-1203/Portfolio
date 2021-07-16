@@ -101,7 +101,7 @@ const NavElements = () => {
           {location.pathname === option.path && (
             <motion.div
               initial={{ width: 0 }}
-              animate={{ width: "80%", transition: { duration: 0.4 } }}
+              animate={{ width: "80%", transition: { duration: 0.6 } }}
               className="mx-auto h-1 bg-purple-700 rounded-full"
             ></motion.div>
           )}

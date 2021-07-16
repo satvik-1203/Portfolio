@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useViewportScroll } from "framer-motion";
-import { HomeCurve, Progress } from "../misc/icons";
+import { HomeCurve, Progress, SmCurve } from "../misc/icons";
 import Skills from "../components/Home/Skills";
 import HomeMain from "../components/Home/HomeMain";
 import AboutMe from "../components/Home/AboutMe";
@@ -13,9 +13,11 @@ const Home = () => {
     >
       <div className="relative">
         <HomeMain />
-        <motion.div className="absolute top-[4rem] left-0 rotate-180 ">
+        <motion.div className="absolute top-[4rem] left-0 rotate-180 xs:rotate-0">
           <HomeCurve />
+          <SmCurve />
         </motion.div>
+
         <motion.div className="fixed left-4 bottom-4">
           <Progress />
         </motion.div>
