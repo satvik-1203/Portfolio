@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "heading": "Strengths",
+    "list": ["Fast Learning", "Leadership", "Helper"]
+  },
+  {
+    "id": 2,
+    "heading": "Languages",
+    "list": ["TypeScript", "JavaScript", "Java"]
+  },
+  {
+    "id": 3,
+    "heading": "Frameworks / Libraries",
+    "list": ["React", "Node", "Express", "Tailwind-CSS"]
+  },
+  {
+    "id": 4,
+    "heading": "Databases",
+    "list": ["MongoDB"]
+  },
+  {
+    "id": 5,
+    "heading": "Tools",
+    "list": [
+      "Vim",
+      "VS Code",
+      "Intellij",
+      "Git & GitHub",
+      "Figma & Affinity designer"
+    ]
+  }
+]

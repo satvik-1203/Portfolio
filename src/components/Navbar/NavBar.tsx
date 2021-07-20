@@ -86,11 +86,11 @@ export default NavBar;
 const NavElements = () => {
   const location = useLocation();
   return (
-    <ul className=" hidden md:flex">
+    <ul className=" hidden md:flex space-x-8">
       {navOption.map((option) => (
         <Link key={option.id} to={option.path}>
           <li
-            className={`mx-4 transition hover:text-white  ${
+            className={` transition hover:text-white  ${
               location.pathname == option.path
                 ? "text-gray-100"
                 : "text-gray-400"
@@ -101,7 +101,7 @@ const NavElements = () => {
           {location.pathname === option.path && (
             <motion.div
               initial={{ width: 0 }}
-              animate={{ width: "80%", transition: { duration: 0.6 } }}
+              animate={{ width: "100%", transition: { duration: 0.6 } }}
               className="mx-auto h-1 bg-purple-700 rounded-full"
             ></motion.div>
           )}

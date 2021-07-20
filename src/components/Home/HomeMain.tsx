@@ -15,7 +15,7 @@ const HomeMain = () => {
       ref={element as any}
       variants={fade}
       animate={controls as any}
-      className=" relative h-screen z-10 px-10 text-white flex flex-col justify-center sm:justify-start sm:pt-[14rem] "
+      className=" relative h-screen z-10 px-10 text-white flex flex-col justify-start pt-[14rem] "
     >
       <div className="overflow-hidden">
         <motion.div
