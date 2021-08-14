@@ -1,4 +1,6 @@
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 import React from "react";
+import ProjectDescription from "./ProjectDescription";
 import projectsJson from "./Projects.json";
 
 export interface IProjectsJson {
@@ -11,10 +13,24 @@ export interface IProjectsJson {
 
 const ProjectMain = () => {
   return (
-    <div className="min-h-screen pt-[6.5rem] px-10  bg-blackBg">
-      <div className="headingContainer flex justify-center flex-col items-center">
-        <h1 className="text-4xl mb-2 text-white">My Projects</h1>
-        <div className=" h-1 bg-purple-700 rounded-full w-full"></div>
+    <div className=" bg-blackBg flex justify-center flex-col items-center">
+      <div className=" min-h-screen  py-[6.5rem] px-10 sm:w-2/3 ">
+        <div className="content flex flex-col justify-center  items-center">
+          <h1 className="text-white  mb-2 text-4xl sm:text-6xl font-bold ">
+            Projects
+          </h1>
+          <div className=" w-9/12 h-1 bg-purple-700 "></div>
+        </div>
+        <AnimateSharedLayout>
+          <motion.div
+            layout
+            className="lg:flex lg:justify-center lg:flex-col lg:items-center"
+          >
+            {projectsJson.map((project) => (
+              <ProjectDescription key={project.id} project={project} />
+            ))}
+          </motion.div>
+        </AnimateSharedLayout>
       </div>
     </div>
   );

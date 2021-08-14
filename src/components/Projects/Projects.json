@@ -10,43 +10,45 @@
     ],
     "link": "https://github.com/satvik-1203/spotifyCloneFrontend"
   },
+
   {
     "id": 2,
     "name": "Chat App",
-    "language": "Typescript",
+    "language": "TypeScript",
     "description": [
       "A chat app using MERN stack and web sockets for real tme chatting",
       "Used Figma for complete backend and frontend prototyping"
     ],
     "link": "https://github.com/shah1012/Typescript-Chat-App-Frontend/tree/sockets"
   },
+
   {
     "id": 3,
-    "name": "CLI Todo App",
-    "language": "Typescript",
-    "description": [
-      "A simple todo Application using the CLI and used Users.json and Todos.json for storing the data of users' credentials",
-      "User authenticated with JWT tokens"
-    ],
-    "link": "https://github.com/thehackingschool/THSCohortE-2021-Satvik/tree/main/Phase2/fs-db-ref"
-  },
-  {
-    "id": 4,
     "name": "Personal Portfolio",
-    "language": "Typescript",
+    "language": "TypeScript",
     "description": [
       "Personal portfolio using React, Framer-motion and Tailwind-CSS",
       "Used Figma for prototyping"
     ],
     "link": "https://github.com/satvik-1203/Portfolio"
   },
+
+  {
+    "id": 4,
+    "name": "Binary bot",
+    "language": "TypeScript",
+    "description": ["A discord bot for moderating my personal discord serer."],
+    "link": "https://github.com/satvik-1203/BinaryBot"
+  },
+
   {
     "id": 5,
-    "name": "Discord bot",
-    "language": "JavaScript",
+    "name": "CLI Todo App",
+    "language": "TypeScript",
     "description": [
-      "A simple discord bot using discordJS API to play around with friends in the discord server "
+      "A simple todo Application using the CLI and used Users.json and Todos.json for storing  users' credentials",
+      "User authenticated with JWT tokens"
     ],
-    "link": "https://github.com/satvik-1203/pikachu-bot"
+    "link": "https://github.com/thehackingschool/THSCohortE-2021-Satvik/tree/main/Phase2/fs-db-ref"
   }
 ]

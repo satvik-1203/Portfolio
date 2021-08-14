@@ -4,19 +4,20 @@ import { HomeCurve, Progress, SmCurve } from "../misc/icons";
 import Skills from "../components/Home/Skills";
 import HomeMain from "../components/Home/HomeMain";
 import AboutMe from "../components/Home/AboutMe";
+import { pageAnimation } from "../misc/pageAnimation";
 
 const Home = () => {
   return (
     <motion.div
+      variants={pageAnimation}
+      initial="initial"
+      animate="animate"
+      exit="exit"
       className="homeContainer background -z-10"
       style={{ backgroundColor: "#181818" }}
     >
       <div className="relative">
         <HomeMain />
-        <motion.div className="absolute top-[4rem] left-0 rotate-180 xs:rotate-0">
-          <HomeCurve />
-          <SmCurve />
-        </motion.div>
 
         <motion.div className="fixed left-4 bottom-4">
           <Progress />

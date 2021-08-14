@@ -20,6 +20,7 @@ module.exports = {
       },
       colors: {
         blackBg: "#181818",
+        card: "#0f0f0f",
       },
       textColor: {
         primary: "#B6B6B6",

@@ -11,7 +11,7 @@ const Skills = () => {
       ref={element as any}
       variants={fade}
       animate={controls as any}
-      className=" min-h-screen text-3xl pt-16 pb-10 sm:w-2/3"
+      className=" min-h-screen  pt-16 pb-10 sm:w-2/3"
     >
       <div className="content flex flex-col justify-center items-center">
         <h1 className="text-white  mb-2 text-4xl sm:text-6xl font-bold ">
