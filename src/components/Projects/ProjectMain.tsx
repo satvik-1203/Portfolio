@@ -1,4 +1,4 @@
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
+import { AnimateSharedLayout, motion } from "framer-motion";
 import React from "react";
 import ProjectDescription from "./ProjectDescription";
 import projectsJson from "./Projects.json";
@@ -8,7 +8,8 @@ export interface IProjectsJson {
   name: string;
   language: string;
   description: string[];
-  link: string;
+  github?: string;
+  domain?: string;
 }
 
 const ProjectMain = () => {

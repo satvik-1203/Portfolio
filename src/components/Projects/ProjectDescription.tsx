@@ -4,16 +4,17 @@ interface Props {
   project: {
     id: number;
     name: string;
-    description: string[];
-    link: string;
     language: string;
+    description: string[];
+    github?: string;
+    domain?: string;
   };
 }
 
 const ProjectDescription: React.FC<Props> = ({ project }) => {
   const [open, setOpen] = React.useState<boolean>(false);
 
-  const { name, description, link, language, id } = project;
+  const { name, description, domain, github, language, id } = project;
 
   return (
     <motion.section
@@ -40,11 +41,20 @@ const ProjectDescription: React.FC<Props> = ({ project }) => {
                   </li>
                 ))}
               </motion.ul>
-              <a href={link} target="_blank">
-                <button className="border-2 rounded-md duration-500 text-white px-2 py-1 mt-3 border-purple-700 hover:bg-purple-600 transition-all hover:scale-90 transform">
-                  Click here
-                </button>
-              </a>
+              {github && (
+                <a href={github} target="_blank">
+                  <button className="border-2 rounded-md duration-500 text-white px-2 py-1 mt-3 border-purple-700 hover:bg-purple-600 transition-all hover:scale-90 transform">
+                    Click here for Github Link
+                  </button>
+                </a>
+              )}
+              {domain && (
+                <a href={domain} target="_blank">
+                  <button className="border-2 lg:ml-4 rounded-md duration-500 text-white px-2 py-1 mt-3 border-purple-700 hover:bg-purple-600 transition-all hover:scale-90 transform">
+                    Click here for Domain Link
+                  </button>
+                </a>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

@@ -8,37 +8,25 @@
       "Used Spotify API and SDK to receive and play songs",
       "OAuth 2.0"
     ],
-    "link": "https://github.com/satvik-1203/spotifyCloneFrontend"
+    "github": "https://github.com/satvik-1203/spotifyCloneFrontend"
   },
-
-  {
-    "id": 2,
-    "name": "Chat App",
-    "language": "TypeScript",
-    "description": [
-      "A chat app using MERN stack and web sockets for real tme chatting",
-      "Used Figma for complete backend and frontend prototyping"
-    ],
-    "link": "https://github.com/shah1012/Typescript-Chat-App-Frontend/tree/sockets"
-  },
-
-  {
-    "id": 3,
-    "name": "Personal Portfolio",
-    "language": "TypeScript",
-    "description": [
-      "Personal portfolio using React, Framer-motion and Tailwind-CSS",
-      "Used Figma for prototyping"
-    ],
-    "link": "https://github.com/satvik-1203/Portfolio"
-  },
-
   {
     "id": 4,
     "name": "Binary bot",
     "language": "TypeScript",
     "description": ["A discord bot for moderating my personal discord serer."],
-    "link": "https://github.com/satvik-1203/BinaryBot"
+    "github": "https://github.com/satvik-1203/BinaryBot"
+  },
+  {
+    "id": 7,
+    "name": "Hacker News",
+    "language": "TypeScript",
+    "description": [
+      "Used hacker news REST apis to get the data of top 10 stories and also top 20 comments on story by dynamic routing",
+      "Hosted this on my Domain"
+    ],
+    "github": "https://github.com/thehackingschool/THSCohortE-2021-Satvik/tree/main/Phase2/hackernews",
+    "domain": "https://isatvik.com/bootcamp/hackernews/"
   },
 
   {
@@ -49,6 +37,41 @@
       "A simple todo Application using the CLI and used Users.json and Todos.json for storing  users' credentials",
       "User authenticated with JWT tokens"
     ],
-    "link": "https://github.com/thehackingschool/THSCohortE-2021-Satvik/tree/main/Phase2/fs-db-ref"
+    "github": "https://github.com/thehackingschool/THSCohortE-2021-Satvik/tree/main/Phase2/fs-db-ref"
+  },
+
+  {
+    "id": 2,
+    "name": "Chat App",
+    "language": "TypeScript",
+    "description": [
+      "A chat app using MERN stack and web sockets for real tme chatting",
+      "Used Figma for complete backend and frontend prototyping"
+    ],
+    "github": "https://github.com/shah1012/Typescript-Chat-App-Frontend/tree/sockets"
+  },
+
+  {
+    "id": 3,
+    "name": "Personal Portfolio",
+    "language": "TypeScript",
+    "description": [
+      "Personal portfolio using React, Framer-motion and Tailwind-CSS",
+      "Used Figma for prototyping"
+    ],
+    "domain": "https://isatvik.com",
+    "github": "https://github.com/satvik-1203/Portfolio"
+  },
+
+  {
+    "id": 6,
+    "name": "GitHub search engine",
+    "language": "TypeScript",
+    "description": [
+      "Used Github REST APIs to get the users' data",
+      "Done it in classes based and functional based components"
+    ],
+    "github": "https://github.com/thehackingschool/THSCohortE-2021-Satvik/tree/main/Phase2/github_search_engine",
+    "domain": "https://isatvik.com/github/"
   }
 ]
