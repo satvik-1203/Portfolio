@@ -58,15 +58,14 @@ const ProjectDescription: React.FC<Props> = ({ project }) => {
             </motion.div>
           )}
         </AnimatePresence>
-        {!open && (
-          <motion.div
-            layout
-            onClick={() => setOpen((prev) => !prev)}
-            className="text-white text-xs text-right"
-          >
-            Click for more
-          </motion.div>
-        )}
+
+        <motion.div
+          layout
+          onClick={() => setOpen((prev) => !prev)}
+          className="text-white text-xs text-right"
+        >
+          {open ? "Show less" : "Click for more "}
+        </motion.div>
       </motion.div>
     </motion.section>
   );

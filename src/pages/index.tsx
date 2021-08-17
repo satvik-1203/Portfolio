@@ -15,19 +15,22 @@ const index = () => {
       className={` overflow-hidden ${open && "overflow-hidden h-screen"}`}
     >
       <NavBar openState={[open, setOpen]} />
-      <AnimatePresence exitBeforeEnter>
-        <Switch location={location} key={location.pathname}>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/projects">
-            <Projects />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-        </Switch>
-      </AnimatePresence>
+
+      <div className="max-w-[1600px] mx-auto lg:pl-16">
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.pathname}>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/projects">
+              <Projects />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
+        </AnimatePresence>
+      </div>
     </motion.div>
   );
 };

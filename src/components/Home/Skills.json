@@ -12,7 +12,7 @@
   {
     "id": 3,
     "heading": "Frameworks / Libraries",
-    "list": ["React", "Node", "Express", "Tailwind-CSS"]
+    "list": ["NextJS", "ReactJS", "NodeJS", "ExpressJS", "Tailwind-CSS"]
   },
   {
     "id": 4,
