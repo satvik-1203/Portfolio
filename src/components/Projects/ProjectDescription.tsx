@@ -35,8 +35,8 @@ const ProjectDescription: React.FC<Props> = ({ project }) => {
               exit={{ opacity: 0 }}
             >
               <motion.ul className="list-outside  list-disc my-2">
-                {description.map((option) => (
-                  <li className="mb-1 ml-4 select-text cursor-text">
+                {description.map((option, index) => (
+                  <li key={index} className="mb-1 ml-4 select-text cursor-text">
                     {option}
                   </li>
                 ))}

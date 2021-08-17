@@ -27,8 +27,8 @@ const ProjectMain = () => {
             layout
             className="lg:flex lg:justify-center lg:flex-col lg:items-center"
           >
-            {projectsJson.map((project) => (
-              <ProjectDescription key={project.id} project={project} />
+            {projectsJson.map((project, index) => (
+              <ProjectDescription key={index} project={project} />
             ))}
           </motion.div>
         </AnimateSharedLayout>

@@ -11,8 +11,8 @@ const SkillOption = ({ skillOption }: Props) => {
       <h2 className="text-white text-2xl sm:text-4xl">{heading}</h2>
       <div className="text-xs text-primary mt-1 sm:mt-3 sm:text-base">
         <ul className="list-inside list-disc">
-          {list.map((option) => (
-            <li>{option}</li>
+          {list.map((option, index) => (
+            <li key={index}>{option}</li>
           ))}
         </ul>
       </div>
