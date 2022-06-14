@@ -1,8 +1,13 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import "../styles/globals.css";
+import type { AppProps } from "next/app";
+import Layouts from "#/components/layout/Index";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <Layouts>
+      <Component {...pageProps} />
+    </Layouts>
+  );
 }
 
-export default MyApp
+export default MyApp;
