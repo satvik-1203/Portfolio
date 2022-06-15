@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useCardAnimation } from "#/hooks/useCardAnimation";
 import About from "./About";
+import Ds_visualizer from "./Ds_visualizer";
 
 interface Props {}
 
@@ -40,6 +41,7 @@ const PageTwo: React.FC<Props> = () => {
           />
           <Card
             content="Ds-visualizer "
+            pageContent={<Ds_visualizer />}
             className="bg-slate-700 md:max-w-none"
             link="/dsvisualizer"
           />

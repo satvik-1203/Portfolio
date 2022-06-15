@@ -10,7 +10,7 @@ const About_pageOne: React.FC<Props> = () => {
       <div>
         {data.aboutme.map((point, index) => (
           <p
-            className="text-gray-100 md:text-xl md:my-6  md:tracking-wider my-3 leading-6 tracking-wide"
+            className="text-gray-100 md:text-xl md:my-4  md:tracking-wider my-3 leading-6 tracking-wide"
             key={index}
           >
             {point}

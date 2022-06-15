@@ -35,7 +35,7 @@ const CardContent: React.FC<Props> = () => {
       className="fixed min-h-screen  z-20 inset-0 bg-gray-900 md:px-16 bg-gradient-to-tl from-gray-800 px-10"
     >
       <div
-        className="fixed top-16 left-5 cursor-pointer text-gray-300 "
+        className="fixed top-16 left-5 cursor-pointer text-gray-300 z-10 "
         onClick={() => {
           setContent({ state: false, content: <></> });
         }}

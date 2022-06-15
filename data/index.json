@@ -1,6 +1,8 @@
 {
   "mainHeading": "Thanks for joining satvik's playground",
+
   "sideHeading": "I love coding and watching dramas in my free time and this portfolio will give you a ride of my life so hop and learn more about me",
+
   "aboutme": [
     "Hey there folks 👋  .",
     "I crave for the knowledge of react, watch a ton of talks on them.",
@@ -8,11 +10,22 @@
     "Also game Valorant everyday for relaxation but it doesn't end up that way :(",
     "Love watching animes and dramas."
   ],
-  "group": [
-    "Highschool years were few of the most adorable years of my life.",
-    "Finished my junior highschool in oakridge and senior highschool in fiitjee.",
-    "I was not smart by any means, prolly the dumbest person, but the freedom and care you receive in those days can't even be bought back again.",
-    "Highschool were the days when you could live out with no dream, make random friends, experience romance, and get away with all the dumb shit you do.",
-    "I'm happy covid didn't effect my highschool days but the same can't be said to college."
-  ]
+
+  "socials": {
+    "Github": "satvik1203, https://github.com/satvik-1203",
+    "Email": "vseeram1@student.gsu.edu, mailto:vseeram1@student.gsu.edu",
+    "Linkedin": "Satvik S, https://www.linkedin.com/in/satvik-seeram"
+  },
+
+  "dsVisualizer": [
+    "This project aims to teach data structures to those who struggle with code snippets and visualizers.",
+    "Used Typescript, Next, React, Supabase, Prisma, PostgreSQL, and Framer-Motion technologies.",
+    "Deployed it on Vercel Edge functions and is sponsored by Vercel.",
+    "200+ Git clones with 100+ PRs (Squash merges), and 150+ commits"
+  ],
+
+  "dsVisualizerLinks": {
+    "Domain Link": "https://dsvisualizer.isatvik.com/",
+    "GitHub": "https://github.com/ds-visualizer/ds-visualizer"
+  }
 }
