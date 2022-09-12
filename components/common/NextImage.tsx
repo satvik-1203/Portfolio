@@ -18,7 +18,7 @@ export default function NextImage({
 }: ImageProps) {
   const [loaded, setLoaded] = useState<boolean>(false);
   const zoom = loaded ? "zoom" : "";
-
+  console.log(width, height);
   return (
     <div className="container">
       <div className={zoom}>
