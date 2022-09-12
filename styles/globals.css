@@ -40,7 +40,7 @@
   }
 
   .solution img {
-    @apply w-full rounded-lg shadow-lg;
+    @apply w-full rounded shadow-lg;
   }
 
   .solution pre code {

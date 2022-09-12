@@ -26,8 +26,8 @@ export default function NextImage({
           onLoadingComplete={() => setLoaded(true)}
           src={src}
           alt={alt}
-          width={width}
-          height={height}
+          width={1060}
+          height={550}
           loading="lazy"
           placeholder={blurDataURL ? "blur" : undefined}
           blurDataURL={blurDataURL}
@@ -37,6 +37,7 @@ export default function NextImage({
       <style jsx>
         {`
           .container {
+            width: 100%;
             overflow: hidden;
           }
           .zoom {
