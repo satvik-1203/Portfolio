@@ -9,6 +9,65 @@
     @apply bg-gray-900 md:px-16 bg-gradient-to-tl from-gray-800 px-10;
     background-attachment: fixed;
   }
+  .solution blockquote {
+    @apply relative before:w-1 before:h-full before:rounded-tl before:rounded-bl before:bg-white before:absolute  my-3;
+  }
+
+  .blog blockquote p {
+    @apply text-gray-400;
+  }
+
+  p {
+    @apply my-2;
+  }
+
+  .solution h1 {
+    @apply text-blue-500 text-4xl md:text-5xl  2xl:text-7xl pb-3;
+  }
+  .solution h2 {
+    @apply text-2xl text-blue-500 md:text-4xl;
+  }
+  .solution h3 {
+    @apply text-2xl text-blue-500 md:text-3xl  2xl:text-4xl;
+  }
+  .solution strong {
+    @apply text-blue-600;
+  }
+  .solution > * {
+    @apply text-base w-[85%]  md:text-lg xl:text-xl leading-[1.6rem] md:leading-[1.8rem] xl:leading-[2rem] text-gray-100;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .solution img {
+    @apply w-full rounded-lg shadow-lg;
+  }
+
+  .solution pre code {
+    @apply text-base leading-7 tracking-wider w-full text-gray-300  font-normal after:content-[''] before:content-[''];
+  }
+
+  .solution pre code span {
+    @apply w-full;
+  }
+
+  .solution pre {
+    @apply bg-gray-800 bg-gradient-to-br px-3 w-full py-4 to-gray-700;
+  }
+  .solution code {
+    @apply py-[0.5px];
+  }
+
+  .solution code {
+    @apply after:content-['\`'] before:content-['\`'] before:text-blue-500 after:text-blue-500 text-blue-400 font-bold;
+  }
+}
+
+.line-number::before {
+  content: attr(line);
+  color: rgb(107 114 128);
+
+  margin-right: 1rem;
 }
 
 html {
@@ -34,4 +93,77 @@ html {
   to {
     top: 2.5rem;
   }
+}
+
+.leetcode_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.solution {
+  color: white;
+}
+
+.solution ul {
+  margin: 1rem 0rem;
+  padding-left: 3rem;
+}
+.solution li {
+  list-style: disc;
+  list-style-position: outside;
+  margin-left: 1rem;
+}
+.solution h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.solution h1 {
+  font-weight: bold;
+  margin: 2.5rem 0;
+  border-bottom: 1px solid #7a7a7a;
+}
+.solution h2 {
+  font-weight: bold;
+  margin: 1.5rem 0;
+}
+.solution p {
+  margin: 1rem 0;
+}
+.solution pre {
+  overflow-x: scroll;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+.solution pre code {
+  background: transparent;
+  font-family: "DM Mono", monospace;
+  text-decoration: none;
+}
+.solution blockquote {
+  border-radius: 0.4rem;
+}
+.solution blockquote p {
+  padding: 0.2rem 1rem;
+  margin: 0;
+  background-color: transparent;
+}
+.solution a {
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #4949ff;
+}
+.rehype-code-title {
+  width: 100%;
+  background-color: #1f2837;
+  color: rgb(84, 134, 214);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  transform: translateY(0.5rem);
+  border-bottom: 0.1rem solid #303c50;
+  padding: 0.4rem 1rem;
+  font-weight: bold;
 }

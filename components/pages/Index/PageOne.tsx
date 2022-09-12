@@ -39,7 +39,7 @@ const PageOne: React.FC<Props> = () => {
         >
           <motion.h1
             variants={item}
-            className="text-gray-50  mb-5 w-[85%] mx-auto text-3xl md:text-5xl text-center"
+            className="text-white  mb-5 w-[85%] mx-auto text-3xl md:text-5xl text-center"
           >
             {indexData.mainHeading}
           </motion.h1>
@@ -62,25 +62,6 @@ const PageOne: React.FC<Props> = () => {
           />
         </motion.div>
       </div>
-
-      <a href="#sectionTwo">
-        <div className="text-gray-200 arrow flex justify-center relative top-7">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 cursor-pointer md:scale-150"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
-            />
-          </svg>
-        </div>
-      </a>
     </section>
   );
 };

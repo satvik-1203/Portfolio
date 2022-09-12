@@ -1,72 +1,39 @@
-import React, { useContext } from "react";
-import { IndexPageContext } from "../pages/Index/Index";
+import ICard from "#/interface/ICard";
+import Link from "next/link";
+import React from "react";
 
 interface Props {
-  content: string;
-  className: string;
-  link: string;
-  external?: boolean;
-  pageContent?: React.ReactNode;
+  data: ICard;
 }
 
-const Card: React.FC<Props> = ({
-  content,
-  className,
-  link,
-  external,
-  pageContent,
-}) => {
-  const { setContent } = useContext(IndexPageContext);
-
+const Card: React.FC<Props> = ({ data }) => {
+  const getDifficultyColor = (type: string) => {
+    if (type == "easy") return "bg-green-600";
+    if (type == "medium") return "bg-yellow-600";
+    if (type == "hard") return "bg-red-600";
+  };
   return (
-    <>
-      <div
-        className={`h-[347px] flex flex-col items-end justify-between max-w-[386px] px-5 py-3 rounded-xl w-full lg:px-10 lg:py-8 ${className} 
-      `}
-      >
-        {external ? (
-          <a href={link} target="_blank" rel="noreferrer">
-            <div className="p-2 w-fit cursor-pointer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 scale-125 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-            </div>
-          </a>
-        ) : (
-          <div
-            onClick={() => setContent({ state: true, content: pageContent })}
-            className="p-2 w-fit cursor-pointer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 scale-125 text-white"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
+    <Link href={"/leetcode/" + data.link || ""}>
+      <a>
+        <div
+          className={` bg-gray-900 w-full flex h-[120px] cursor-pointer rounded-sm transition-transform duration-[400ms] transform origin-top-left hover:-translate-y-4 hover:-translate-x-2 shadow hover:outline hover:outline-white `}
+        >
+          <div className="flex h-full items-center px-3">
+            <div
+              className={`w-[30px] h-[30px] ${getDifficultyColor(
+                data.difficulty
+              )} rounded-full outline outline-white`}
+            ></div>
           </div>
-        )}
-        <p className="text-3xl text-gray-100 opacity-70">{content}</p>
-      </div>
-    </>
+          <div className="h-full w-full flex flex-col justify-end items-end py-4 px-5">
+            <h4 className=" text-lg text-gray-100 text-right">{data.name}</h4>
+            <p className="text-sm mt-1 text-gray-300 text-right">
+              {data.topics}
+            </p>
+          </div>
+        </div>
+      </a>
+    </Link>
   );
 };
 

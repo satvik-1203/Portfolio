@@ -1,6 +1,5 @@
 import React, { createContext, useState } from "react";
 import PageOne from "./PageOne";
-import PageTwo from "./PageTwo";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePageFade, fade } from "#/hooks/usePageFade";
 import CardContent from "./CardContent";
@@ -16,7 +15,7 @@ const Index: React.FC<Props> = () => {
 
   return (
     <IndexPageContext.Provider value={{ content, setContent }}>
-      <div className="relative">
+      <div className="relative -mt-32">
         <motion.div
           ref={elementOne as any}
           variants={fade}
@@ -25,16 +24,18 @@ const Index: React.FC<Props> = () => {
           <PageOne />
         </motion.div>
 
-        <motion.div
-          ref={elementTwo as any}
-          variants={fade}
-          animate={controlsTwo as any}
-        >
-          <PageTwo />
-        </motion.div>
         <AnimatePresence>{content.state && <CardContent />}</AnimatePresence>
       </div>
     </IndexPageContext.Provider>
+    // <div className="text-white min-h-screen">
+    //   <div className="flex mt-16 ">
+    //     <h1 className="text-4xl ">Namaste,</h1>
+    //     <p className="mt-12 -ml-6 text-lg leading-5 tracking-wide text-gray-300">
+    //       This is a place dedicated to myself in the world of internet, to share
+    //       my thoughts, codes and daily leetcoding.
+    //     </p>
+    //   </div>
+    // </div>
   );
 };
 
