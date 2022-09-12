@@ -167,15 +167,3 @@ html {
   padding: 0.4rem 1rem;
   font-weight: bold;
 }
-
-.container {
-  overflow: hidden;
-}
-.zoom {
-  animation: zoom 0.3s linear;
-}
-@keyframes zoom {
-  from {
-    transform: scale(1.1);
-  }
-}

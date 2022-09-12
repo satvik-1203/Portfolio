@@ -33,6 +33,22 @@ export default function NextImage({
           blurDataURL={blurDataURL}
         />
       </div>
+
+      <style jsx>
+        {`
+          .container {
+            overflow: hidden;
+          }
+          .zoom {
+            animation: zoom 0.3s linear;
+          }
+          @keyframes zoom {
+            from {
+              transform: scale(1.1);
+            }
+          }
+        `}
+      </style>
     </div>
   );
 }
