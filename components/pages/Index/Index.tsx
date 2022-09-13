@@ -1,8 +1,8 @@
 import React, { createContext, useState } from "react";
 import PageOne from "./PageOne";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import { usePageFade, fade } from "#/hooks/usePageFade";
-import CardContent from "./CardContent";
+import PageTwo from "./PageTwo";
 
 interface Props {}
 
@@ -10,7 +10,6 @@ export const IndexPageContext = createContext({} as any);
 
 const Index: React.FC<Props> = () => {
   const [elementOne, controlsOne] = usePageFade();
-  const [elementTwo, controlsTwo] = usePageFade();
   const [content, setContent] = useState({ state: false, content: <></> });
 
   return (
@@ -23,8 +22,9 @@ const Index: React.FC<Props> = () => {
         >
           <PageOne />
         </motion.div>
-
-        <AnimatePresence>{content.state && <CardContent />}</AnimatePresence>
+        <motion.div>
+          <PageTwo />
+        </motion.div>
       </div>
     </IndexPageContext.Provider>
     // <div className="text-white min-h-screen">

@@ -6,7 +6,7 @@
 
 @layer components {
   body {
-    @apply bg-gray-900 md:px-16 bg-gradient-to-tl from-gray-800 px-10;
+    @apply bg-gray-900 md:px-16 bg-gradient-to-tl from-gray-800 px-10 text-white;
     background-attachment: fixed;
   }
   .solution blockquote {
@@ -23,6 +23,9 @@
 
   .solution h1 {
     @apply text-blue-500 text-4xl md:text-5xl  2xl:text-7xl pb-3;
+  }
+  h2 {
+    @apply text-2xl md:text-4xl;
   }
   .solution h2 {
     @apply text-2xl text-blue-500 md:text-4xl;
