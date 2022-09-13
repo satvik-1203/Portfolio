@@ -11,7 +11,7 @@ const Card: React.FC<Props> = ({ data }) => {
     <Link href={data.link}>
       <a target={newPage ? "_blank" : ""} rel={newPage ? "noreferrer" : ""}>
         <div
-          className={` bg-gray-900 w-full flex h-[120px] cursor-pointer rounded-sm transition-transform duration-[400ms] transform origin-top-left hover:-translate-y-4 hover:-translate-x-2 shadow hover:outline hover:outline-white `}
+          className={` bg-gray-900 w-full flex h-[120px] cursor-pointer rounded-sm transition-transform duration-[400ms] transform origin-top-left hover:-translate-y-4 hover:-translate-x-2 shadow hover:outline outline-2 hover:outline-purple-700 `}
         >
           <div className="flex h-full items-center px-3"></div>
           <div className="h-full w-full flex flex-col justify-end items-end py-4 px-5">

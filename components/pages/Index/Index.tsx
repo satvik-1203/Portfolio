@@ -15,7 +15,7 @@ const Index: React.FC<Props> = () => {
 
   return (
     <IndexPageContext.Provider value={{ content, setContent }}>
-      <div className="relative index_container -mt-32">
+      <div className="relative index_container -mt-32 ">
         <motion.div
           ref={elementOne as any}
           variants={fade}
@@ -31,6 +31,14 @@ const Index: React.FC<Props> = () => {
           <Projects />
         </div> */}
       </div>
+
+      <style>
+        {`
+          *::-webkit-scrollbar {
+            display: none;
+          }
+        `}
+      </style>
     </IndexPageContext.Provider>
     // <div className="text-white min-h-screen">
     //   <div className="flex mt-16 ">
