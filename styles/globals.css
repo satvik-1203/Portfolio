@@ -176,8 +176,10 @@ html {
   overflow-y: scroll;
   overflow-x: visible;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 .section_start {
   scroll-snap-align: start;
+  padding-top: 8rem;
 }

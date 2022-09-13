@@ -6,11 +6,12 @@ interface Props {}
 const showCases = [
   { title: "Resume", link: "/resume.pdf", newPage: true },
   { title: "Projects", link: "#projects", newPage: false },
+  { title: "Contacts", link: "#Contacts", newPage: false },
 ];
 
 const PageTwo: React.FC<Props> = () => {
   return (
-    <div className="min-h-screen py-32">
+    <div className="min-h-screen ">
       <div className="min-h-screen">
         <h2 className="">My story</h2>
         <div className="mt-8 leading-6 tracking-wide text-lg text-gray-300 flex flex-col space-y-4">

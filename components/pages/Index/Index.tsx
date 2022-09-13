@@ -3,6 +3,7 @@ import PageOne from "./PageOne";
 import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import { usePageFade, fade } from "#/hooks/usePageFade";
 import PageTwo from "./PageTwo";
+import Projects from "./Projects";
 
 interface Props {}
 
@@ -14,18 +15,21 @@ const Index: React.FC<Props> = () => {
 
   return (
     <IndexPageContext.Provider value={{ content, setContent }}>
-      <div className="relative -mt-32 index_container">
+      <div className="relative index_container -mt-32">
         <motion.div
           ref={elementOne as any}
           variants={fade}
           animate={controlsOne as any}
-          className="section_start"
+          className="section_start -mt-32"
         >
           <PageOne />
         </motion.div>
-        <motion.div className="section_start">
+        <div className="section_start">
           <PageTwo />
-        </motion.div>
+        </div>
+        {/* <div className="section_start" id="projects">
+          <Projects />
+        </div> */}
       </div>
     </IndexPageContext.Provider>
     // <div className="text-white min-h-screen">
