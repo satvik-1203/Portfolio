@@ -14,15 +14,16 @@ const Index: React.FC<Props> = () => {
 
   return (
     <IndexPageContext.Provider value={{ content, setContent }}>
-      <div className="relative -mt-32">
+      <div className="relative -mt-32 index_container">
         <motion.div
           ref={elementOne as any}
           variants={fade}
           animate={controlsOne as any}
+          className="section_start"
         >
           <PageOne />
         </motion.div>
-        <motion.div>
+        <motion.div className="section_start">
           <PageTwo />
         </motion.div>
       </div>
