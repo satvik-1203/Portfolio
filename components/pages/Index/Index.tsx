@@ -15,7 +15,7 @@ const Index: React.FC<Props> = () => {
 
   return (
     <IndexPageContext.Provider value={{ content, setContent }}>
-      <div className="relative index_container -mt-32 ">
+      <div className="relative index_container -mt-32 px-3">
         <motion.div
           ref={elementOne as any}
           variants={fade}
@@ -27,9 +27,9 @@ const Index: React.FC<Props> = () => {
         <div className="section_start">
           <PageTwo />
         </div>
-        {/* <div className="section_start" id="projects">
+        <div className="section_start" id="projects">
           <Projects />
-        </div> */}
+        </div>
       </div>
 
       <style>

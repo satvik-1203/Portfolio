@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Ds-visualizer",
+    "description": [
+      "Describes each data structure in depth with code analysis and a visualizer.",
+      "Used in university lectures for an entire semester for teaching purposes."
+    ],
+    "links": [
+      {
+        "link": "https://github.com/ds-visualizer/ds-visualizer",
+        "title": "Github"
+      },
+      {
+        "link": "https://dsvisualizer.isatvik.com",
+        "title": "Web Page"
+      }
+    ]
+  },
+  { "title": "Portfolio", "description": [], "links": [] },
+  { "title": "Payload-Neo Bot", "description": [], "links": [] },
+  { "title": "Daily Leetcoding", "description": [], "links": [] },
+  { "title": "Wayfinder", "description": [], "links": [] }
+]

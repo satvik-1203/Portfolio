@@ -204,3 +204,12 @@ html {
   display: none;
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
+
+.projects_container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-flow: row dense;
+  grid-auto-rows: 100px;
+  /* align-items: stretch; */
+}
