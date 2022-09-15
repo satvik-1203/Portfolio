@@ -2,8 +2,8 @@
   {
     "title": "Ds-visualizer",
     "description": [
-      "Describes each data structure in depth with code analysis and a visualizer.",
-      "Used in university lectures for an entire semester for teaching purposes."
+      "Used in university lectures for an entire semester for helping students understand Data structures.",
+      "Open sourced, with 200+ unique git clones, 100 PRS and 10+ stars."
     ],
     "links": [
       {
@@ -16,8 +16,64 @@
       }
     ]
   },
-  { "title": "Portfolio", "description": [], "links": [] },
-  { "title": "Payload-Neo Bot", "description": [], "links": [] },
-  { "title": "Daily Leetcoding", "description": [], "links": [] },
-  { "title": "Wayfinder", "description": [], "links": [] }
+  {
+    "title": "Portfolio",
+    "description": [
+      "Page to describe my strengths and projects",
+      "Runs on SSR and SSG hybrid rendering on the edge",
+      "Used NextJs, TypeScript, Framer-motion"
+    ],
+    "links": [
+      {
+        "link": "https://github.com/satvik-1203/Portfolio_main",
+        "title": "Github"
+      },
+      {
+        "link": "https://isatvik.com",
+        "title": "Web Page"
+      }
+    ]
+  },
+
+  {
+    "title": "Wayfinder",
+    "description": [
+      "An alumni network for GSU to connect current undergrad students with alumni's",
+      "Used Google Maps API, NextJs, AWS dynomoDB, supabase, Qualtrics surveys,and linkedin integration."
+    ],
+    "links": [
+      {
+        "title": "Web Page",
+        "link": "https://wayfinder-serverless-satvik-1203.vercel.app/"
+      }
+    ]
+  },
+
+  {
+    "title": "Payload-Neo Bot",
+    "description": [
+      "Largest Open sources bot for Team Fortress 2 with 20k+ daily users",
+      "Contributed by porting commands from vanilla JS to Sapphire-JS"
+    ],
+    "links": [
+      {
+        "title": "Pull Req",
+        "link": "https://github.com/payload-bot/payload-neo/pull/100"
+      }
+    ]
+  },
+
+  {
+    "title": "Daily Leetcoding",
+    "description": [
+      "Just a daily update on the leetcode question I solve",
+      "Uses github as Content Management System that stores all the mdx files"
+    ],
+    "links": [
+      {
+        "title": "Web Page",
+        "link": "/leetcode"
+      }
+    ]
+  }
 ]

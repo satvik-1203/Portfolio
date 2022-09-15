@@ -42,7 +42,7 @@ const ProjectCard: React.FC<Props> = ({ data }) => {
             <ul>
               {description.map((point, index) => (
                 <li className="mt-2 text-gray-300" key={index}>
-                  {point}
+                  {point.endsWith(".") ? point : point + "."}
                 </li>
               ))}
             </ul>
