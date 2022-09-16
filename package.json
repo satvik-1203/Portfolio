@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@silvenon/remark-smartypants": "^2.0.0",
+    "axios": "^0.27.2",
     "esbuild": "^0.15.7",
     "framer-motion": "^6.2.8",
     "gray-matter": "^4.0.3",
