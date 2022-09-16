@@ -18,7 +18,7 @@
   }
 
   p {
-    @apply my-2;
+    @apply my-2 text-sm md:text-base;
   }
 
   .solution h1 {
@@ -171,7 +171,7 @@
   scroll-behavior: smooth;
 }
 
-.section_start {
+.index_container .section_start {
   scroll-snap-align: start;
   padding-top: 8rem;
   max-width: 1100px;
@@ -212,4 +212,12 @@ html {
   grid-auto-flow: row dense;
   grid-auto-rows: 100px;
   /* align-items: stretch; */
+}
+
+.top_space {
+  padding-top: 5rem;
+}
+
+.page_first {
+  padding-top: 7rem;
 }

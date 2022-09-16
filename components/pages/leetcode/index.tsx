@@ -6,13 +6,13 @@ interface Props {}
 
 const index: React.FC<Props> = () => {
   return (
-    <div className="">
+    <section className="page_first">
       <div className="leetcode_grid">
         {leetcode.map((code, index) => (
           <Card key={index} data={code} />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

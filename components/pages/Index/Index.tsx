@@ -15,30 +15,22 @@ const Index: React.FC<Props> = () => {
 
   return (
     <IndexPageContext.Provider value={{ content, setContent }}>
-      <div className="relative index_container -mt-32 px-3">
+      <section className="relative  px-3">
         <motion.div
           ref={elementOne as any}
           variants={fade}
           animate={controlsOne as any}
-          className="section_start -mt-32"
+          className=""
         >
           <PageOne />
         </motion.div>
-        <div className="section_start">
+        <div className="top_space" id="about">
           <PageTwo />
         </div>
-        <div className="section_start" id="projects">
+        <div className="top_space" id="projects">
           <Projects />
         </div>
-      </div>
-
-      <style>
-        {`
-          *::-webkit-scrollbar {
-            display: none;
-          }
-        `}
-      </style>
+      </section>
     </IndexPageContext.Provider>
     // <div className="text-white min-h-screen">
     //   <div className="flex mt-16 ">

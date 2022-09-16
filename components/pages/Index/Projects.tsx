@@ -7,7 +7,7 @@ interface Props {}
 
 const Projects: React.FC<Props> = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-[80vh]">
       <h2>Projects</h2>
 
       <div className="mt-16 projects_container">

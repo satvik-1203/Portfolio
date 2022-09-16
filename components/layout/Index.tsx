@@ -10,11 +10,7 @@ const Index: React.FC<Props> = ({ children }) => {
   return (
     <div className="">
       <NavBar></NavBar>
-      <div
-        className={`   mt-32 py-5 ${
-          pathname != "/" ? "max-w-[1100px] px-5 mx-auto  " : ""
-        }`}
-      >
+      <div className={`  py-5  max-w-[1100px] px-5 mx-auto main_child`}>
         {children}
       </div>
     </div>

@@ -32,7 +32,7 @@ const question = ({ code, frontmatter }: pageProps) => {
       <Head>
         <title>{frontmatter.name}</title>
       </Head>
-      <div>
+      <div className="page_first">
         <Post code={code} />
       </div>
     </>
