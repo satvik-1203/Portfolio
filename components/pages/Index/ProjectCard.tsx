@@ -1,4 +1,5 @@
 import IProjectCard from "#/interface/IProjectCard";
+import { Arrow } from "#/misc/icons";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
@@ -13,7 +14,7 @@ const ProjectCard: React.FC<Props> = ({ data }) => {
     <motion.div
       className={`${
         show ? "row-span-3" : ""
-      } rounded px-4 outline-2 outline-purple-700 hover:outline bg-gray-900`}
+      } rounded px-4 outline-2 hover:outline-purple-700 outline outline-transparent bg-gray-900`}
       layout
     >
       <motion.div
@@ -24,9 +25,16 @@ const ProjectCard: React.FC<Props> = ({ data }) => {
       >
         <motion.div
           layout
-          className="h-[100px] flex items-center text-xl text-gray-100 "
+          className="h-[100px] flex justify-between items-center text-xl text-gray-100 "
         >
-          {title}
+          <div>{title}</div>
+          <div
+            className={`${
+              show ? "rotate-180" : "rotate-0"
+            } transition-all duration-300 text-gray-300 w-6 h-6`}
+          >
+            <Arrow />
+          </div>
         </motion.div>
         {show && (
           <motion.div

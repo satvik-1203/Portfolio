@@ -11,7 +11,7 @@ const showCases = [
 
 const PageTwo: React.FC<Props> = () => {
   return (
-    <section className="min-h-screen">
+    <section className="min-h-[80vh]">
       <h2 className="">My story</h2>
       <div className="mt-8 leading-6 tracking-wide text-lg text-gray-300 flex flex-col space-y-4">
         <p>
