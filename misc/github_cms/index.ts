@@ -1,3 +1,5 @@
+import ICard from "#/interface/ICard";
+import IUpdate from "#/interface/IUpdates";
 import axios from "axios";
 
 const token = process.env["GITHUB_KEY"];
@@ -14,7 +16,7 @@ const leetCodeRepo = "daily-leetcoding";
 
 // Gets post from github api
 
-export const getPostsForLeetCode = async () => {
+export const getPostsForLeetCode = async (): Promise<ICard[]> => {
   const url = `${baseUrl}${leetCodeRepo}/contents/data/leetcode.json?ref=main`;
   try {
     const { data } = await axios.get(url, {
@@ -37,5 +39,18 @@ export const getPostForLeetCode = async (postUrl: string): Promise<string> => {
   } catch {
     console.log(url);
     throw new Error("File not found in the directory");
+  }
+};
+
+const portfolioRepo = "Portfolio_main";
+
+export const getUpdates = async (): Promise<[IUpdate, IUpdate]> => {
+  const url = `${baseUrl}${portfolioRepo}/contents/data/updates.json`;
+
+  try {
+    const { data } = await axios.get(url, { headers });
+    return data;
+  } catch {
+    throw new Error("File not found");
   }
 };

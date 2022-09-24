@@ -9,7 +9,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method != "POST")
     return res.status(404).json({ msg: "Invalid Method" });
 
-  console.log(req.body.body);
+  console.log(req);
 
   res.status(200).json(req.body);
 }

@@ -33,6 +33,9 @@
   .solution h3 {
     @apply text-2xl text-blue-500 md:text-3xl  2xl:text-4xl;
   }
+  h3 {
+    @apply text-lg text-white md:text-xl  xl:text-2xl;
+  }
   .solution strong {
     @apply text-blue-600;
   }

@@ -4,12 +4,15 @@ import { motion, AnimatePresence, MotionConfig } from "framer-motion";
 import { usePageFade, fade } from "#/hooks/usePageFade";
 import PageTwo from "./PageTwo";
 import Projects from "./Projects";
+import IUpdate from "#/interface/IUpdates";
 
-interface Props {}
+interface Props {
+  updates: [IUpdate, IUpdate];
+}
 
 export const IndexPageContext = createContext({} as any);
 
-const Index: React.FC<Props> = () => {
+const Index: React.FC<Props> = ({ updates }) => {
   const [elementOne, controlsOne] = usePageFade();
   const [content, setContent] = useState({ state: false, content: <></> });
 
@@ -22,7 +25,7 @@ const Index: React.FC<Props> = () => {
           animate={controlsOne as any}
           className=""
         >
-          <PageOne />
+          <PageOne updates={updates} />
         </motion.div>
         <div className="top_space" id="about">
           <PageTwo />
