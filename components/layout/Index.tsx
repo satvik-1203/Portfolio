@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
+import Footer from "./Footer";
 import NavBar from "./NavBar";
 
 interface Props {}
@@ -7,9 +8,13 @@ interface Props {}
 const Index: React.FC<Props> = ({ children }) => {
   const { pathname } = useRouter();
   return (
-    <div className={` relative py-5  max-w-[1100px] px-5 mx-auto main_child`}>
-      <NavBar></NavBar>
-      {children}
+    <div
+      className={`min-h-screen relative py-5  max-w-[1100px] px-5 mx-auto main_child`}
+    >
+      <NavBar />
+      <div className="">{children}</div>
+      <div className="h-20"></div>
+      <Footer />
     </div>
   );
 };

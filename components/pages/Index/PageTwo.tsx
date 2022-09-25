@@ -6,7 +6,7 @@ interface Props {}
 const showCases = [
   { title: "Resume", link: "/resume.pdf", newPage: true },
   { title: "Projects", link: "#projects", newPage: false },
-  { title: "Contacts", link: "#Contacts", newPage: false },
+  { title: "Contacts", link: "#contacts", newPage: false },
 ];
 
 const PageTwo: React.FC<Props> = () => {

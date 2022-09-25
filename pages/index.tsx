@@ -1,7 +1,6 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Index from "#/components/pages/Index/Index";
 import Head from "next/head";
-import updates from "#/data/updates.json";
 import { getPostsForLeetCode } from "#/misc/github_cms";
 
 const Home = ({ updates }: { updates: any }) => {
