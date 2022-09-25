@@ -1,7 +1,16 @@
+import IBlog from "./IBlogs";
 import ICard from "./ICard";
 
-export default interface IUpdate {
-  type: "leetcode" | "blog";
+type IUpdate = Leetcode | Blog;
 
-  recent: Array<ICard>;
+interface Leetcode {
+  type: "leetcode";
+  recent: ICard[];
 }
+
+interface Blog {
+  type: "blog";
+  recent: IBlog[];
+}
+
+export default IUpdate;

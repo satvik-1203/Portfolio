@@ -1,3 +1,4 @@
+import IBlog from "#/interface/IBlogs";
 import ICard from "#/interface/ICard";
 import IUpdate from "#/interface/IUpdates";
 import axios from "axios";
@@ -32,6 +33,33 @@ export const getPostsForLeetCode = async (): Promise<ICard[]> => {
 
 export const getPostForLeetCode = async (postUrl: string): Promise<string> => {
   const url = `${baseUrl}${leetCodeRepo}/contents/code/${postUrl}.md?ref=main`;
+  try {
+    const { data } = await axios.get(url, { headers });
+
+    return data;
+  } catch {
+    console.log(url);
+    throw new Error("File not found in the directory");
+  }
+};
+
+const blogRepo = "blogs";
+
+export const getBlogs = async (): Promise<IBlog[]> => {
+  const url = `${baseUrl}${blogRepo}/contents/data/blogs.json?ref=main`;
+
+  try {
+    const { data } = await axios.get(url, { headers });
+
+    return data;
+  } catch {
+    throw new Error("File not found");
+  }
+};
+
+export const getBlog = async (filename: string): Promise<string> => {
+  const url = `${baseUrl}${blogRepo}/contents/blogs/${filename}.md?ref=main`;
+
   try {
     const { data } = await axios.get(url, { headers });
 

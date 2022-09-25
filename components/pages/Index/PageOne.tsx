@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import IUpdate from "#/interface/IUpdates";
 import Card from "#/components/common/Card";
+import BlogCard from "#/components/common/BlogCard";
 
 interface Props {
   updates: [IUpdate, IUpdate];
@@ -41,15 +42,17 @@ const PageOne: React.FC<Props> = ({ updates }) => {
       <div className="mt-8">
         <h3 className="my-4">Leetcodes</h3>
         <div className="leetcode_grid">
-          {updates[0].recent.map((card, index) => (
-            <Card data={card} key={index} />
-          ))}
+          {updates[0].type == "leetcode" &&
+            updates[0].recent.map((card, index) => (
+              <Card data={card} key={index} />
+            ))}
         </div>
         <h3 className="my-4">Blogs</h3>
         <div className="leetcode_grid">
-          {updates[1].recent.map((card, index) => (
-            <Card data={card} key={index} />
-          ))}
+          {updates[1].type == "blog" &&
+            updates[1].recent.map((card, index) => (
+              <BlogCard blog={card} key={index} />
+            ))}
         </div>
       </div>
     </section>

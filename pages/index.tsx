@@ -1,7 +1,7 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Index from "#/components/pages/Index/Index";
 import Head from "next/head";
-import { getPostsForLeetCode } from "#/misc/github_cms";
+import { getBlogs, getPostsForLeetCode } from "#/misc/github_cms";
 
 const Home = ({ updates }: { updates: any }) => {
   return (
@@ -22,6 +22,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   );
 
   const posts = await getPostsForLeetCode();
+  const blogs = await getBlogs();
 
   return {
     props: {
@@ -32,7 +33,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
         },
         {
           type: "blog",
-          recent: [],
+          recent: blogs.slice(0, 3),
         },
       ],
     },
