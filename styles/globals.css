@@ -56,7 +56,7 @@
   }
 
   .solution pre code {
-    @apply font-light leading-5 text-base tracking-widest w-full text-gray-300 after:content-[''] before:content-[''];
+    @apply font-light leading-7 text-base tracking-widest w-full text-gray-300 after:content-[''] before:content-[''];
   }
 
   .solution pre code span {
