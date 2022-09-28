@@ -22,7 +22,7 @@ const Card: React.FC<Props> = ({ data }) => {
             <div
               className={`w-[30px] h-[30px] ${getDifficultyColor(
                 data.difficulty
-              )} rounded-full outline outline-white`}
+              )} rounded-full outline border-white`}
             ></div>
           </div>
           <div className="h-full w-full flex flex-col justify-end items-end py-4 px-5">
