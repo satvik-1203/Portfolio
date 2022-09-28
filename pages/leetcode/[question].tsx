@@ -36,7 +36,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       notFound: true,
     };
   }
-
   const { frontmatter, html } = await bundleMDX(content);
 
   ctx.res.setHeader("Cache-Control", "max-age=604800, must-revalidate, public");

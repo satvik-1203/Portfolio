@@ -4,6 +4,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap");
+
 @layer components {
   body {
     @apply bg-gray-900  bg-gradient-to-tl from-gray-800 text-white;
@@ -54,7 +56,7 @@
   }
 
   .solution pre code {
-    @apply text-base leading-7 tracking-wider w-full text-gray-300  font-normal after:content-[''] before:content-[''];
+    @apply font-light leading-5 text-base tracking-widest w-full text-gray-300 after:content-[''] before:content-[''];
   }
 
   .solution pre code span {
@@ -141,8 +143,9 @@
 }
 .solution pre code {
   background: transparent;
-  font-family: "DM Mono", monospace;
-  text-decoration: none;
+  font-family: "Noto Sans Mono", monospace;
+
+  /* text-decoration: none; */
 }
 .solution blockquote {
   border-radius: 0.4rem;
