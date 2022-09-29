@@ -21,29 +21,22 @@ const PageTwo: React.FC<Props> = () => {
           me. At the beginning of the second semester, ideas started flowing
           through my brain that motivated me to begin coding seriously. In the
           coming weeks, I started learning data structures, web dev, and
-          leetcode. Time passed, adrenaline snowballed, and miraculously, I
-          ended up coding for 13 hours a day, breathing, eating, and sleeping.
-          My sleep dreams were getting ideas for the projects and the leetcode
-          solution I did before bed.
+          leetcode. Soon after, all I could remember was coding day and night.
         </p>
         <p>
           Months passed, and during the summer, I took up a MERN stack Bootcamp.
           Things started stressing out at that point, working on group projects,
           learning the core programming concepts, analyzing customer feedback,
-          etc. The work was not for nothing, the next semester, and I hit a
-          milestone. I made lecture notes for my professor to use in his data
-          structure class with a data structure visualizer and simplified code
-          and explanation. Also, my first Open Source Project, 70+ PRs, 100+
-          commits, 10+ git likes, and 5 forks{" "}
+          etc. The next semester I hit milestone. Made my biggest project{" "}
           <a
-            href="https://dsvisualizer.isatvik.com"
             className="text-blue-600 underline "
             target={"_blank"}
             rel="noreferrer"
           >
             Ds-visualizer
-          </a>
-          .
+          </a>{" "}
+          worked on it from August to December of 2022. Open sourced the code,
+          sponsored by vercel and 100+ PRs.
         </p>
       </div>
       <section>
