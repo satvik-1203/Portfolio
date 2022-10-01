@@ -4,6 +4,7 @@ import Head from "next/head";
 import { getBlogs } from "#/misc/github_cms";
 import IBlog from "#/interface/IBlogs";
 import Blog from "#/components/pages/blog";
+import hoursToSeconds from "#/misc/hoursToSeconds";
 
 const about = ({ blogs }: { blogs: IBlog[] }) => {
   return (
@@ -22,7 +23,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   ctx.res.setHeader(
     "Cache-Control",
     // 28 represents the hours
-    `max-age=${28 * 3600}, must-revalidate, public`
+    `max-age=${hoursToSeconds(8)}, must-revalidate, public`
   );
 
   const blogs = await getBlogs();

@@ -2,6 +2,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import Index from "#/components/pages/Index/Index";
 import Head from "next/head";
 import { getBlogs, getPostsForLeetCode } from "#/misc/github_cms";
+import hoursToSeconds from "#/misc/hoursToSeconds";
 
 const Home = ({ updates }: { updates: any }) => {
   return (
@@ -18,7 +19,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   ctx.res.setHeader(
     "Cache-Control",
     // 28 represents the hours
-    `max-age=${28 * 3600}, must-revalidate, public`
+    `max-age=${hoursToSeconds(8)}, must-revalidate, public`
   );
 
   const posts = await getPostsForLeetCode();

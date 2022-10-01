@@ -1,9 +1,19 @@
-import Post from "#/components/common/Post";
-import bundleMDX from "#/misc/bundleMDX";
-import { getBlog } from "#/misc/github_cms";
+// Next and React
+
 import { GetServerSideProps } from "next";
 import React from "react";
 import Head from "next/head";
+
+// Content related
+
+import Post from "#/components/common/Post";
+import bundleMDX from "#/misc/bundleMDX";
+import { getBlog } from "#/misc/github_cms";
+
+// Redis and cache
+
+import hoursToSeconds from "#/misc/hoursToSeconds";
+import { getCache, setCache } from "#/misc/redis";
 
 interface Props {
   frontmatter: Record<string, string>;
@@ -28,18 +38,29 @@ const slug = ({ frontmatter, html }: Props) => {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const filename = ctx.params!.slug as string;
 
-  let content;
-  try {
-    content = await getBlog(filename);
-  } catch {
-    return {
-      notFound: true,
-    };
+  const key = `blog-${filename}`;
+
+  let content = (await getCache(key)) as string;
+
+  if (!content) {
+    try {
+      content = await getBlog(filename);
+    } catch {
+      return {
+        notFound: true,
+      };
+    }
+
+    setCache(key, content);
   }
 
   const { frontmatter, html } = await bundleMDX(content);
 
-  ctx.res.setHeader("Cache-Control", "max-age=604800, must-revalidate, public");
+  ctx.res.setHeader(
+    "Cache-Control",
+    `max-age=${hoursToSeconds(8)}, must-revalidate, public`
+  );
+
   return {
     props: {
       html,

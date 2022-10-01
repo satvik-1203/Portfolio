@@ -4,6 +4,7 @@ import Leetcode from "#/components/pages/leetcode";
 import { GetServerSideProps } from "next";
 import { getPostsForLeetCode } from "#/misc/github_cms";
 import ICard from "#/interface/ICard";
+import hoursToSeconds from "#/misc/hoursToSeconds";
 
 interface ServerData {
   questions: ICard[];
@@ -26,7 +27,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   ctx.res.setHeader(
     "Cache-Control",
     // 28 represents the hours
-    `max-age=${28 * 3600}, must-revalidate, public`
+    `max-age=${hoursToSeconds(8)}, must-revalidate, public`
   );
 
   const questions = await getPostsForLeetCode();
