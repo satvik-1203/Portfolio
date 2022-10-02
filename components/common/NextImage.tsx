@@ -9,16 +9,11 @@ interface ImageProps {
   blurDataURL: string;
 }
 
-export default function NextImage({
-  src,
-  alt,
-  width,
-  height,
-  blurDataURL,
-}: ImageProps) {
+export default function NextImage(props: ImageProps) {
+  const { src, alt, width, height, blurDataURL } = props;
+
   const [loaded, setLoaded] = useState<boolean>(false);
   const zoom = loaded ? "zoom" : "";
-  console.log(width, height);
   return (
     <div className="container">
       <div className={zoom}>
@@ -27,10 +22,11 @@ export default function NextImage({
           src={src}
           alt={alt}
           width={1060}
-          height={550}
+          height={500}
           loading="lazy"
           placeholder={blurDataURL ? "blur" : undefined}
           blurDataURL={blurDataURL}
+          objectFit={"contain"}
         />
       </div>
 
