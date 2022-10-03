@@ -36,9 +36,9 @@ const Index: React.FC<Props> = ({ updates }) => {
         <div className="top_space" id="projects">
           <Projects />
         </div>
-        <div id="contacts" className="top_space">
+        {/* <div id="contacts" className="top_space">
           <Contact />
-        </div>
+        </div> */}
       </section>
     </IndexPageContext.Provider>
     // <div className="text-white min-h-screen">
