@@ -34,7 +34,7 @@ const item = {
 
 const PageOne: React.FC<Props> = ({ updates }) => {
   return (
-    <section className="min-h-[80vh] page_first relative flex flex-col">
+    <section className="min-h-[80vh] relative flex flex-col">
       <div>
         <h2>Updates</h2>
       </div>
