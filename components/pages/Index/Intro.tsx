@@ -10,7 +10,7 @@ const Intro: React.FC<Props> = () => {
           Hey there, I&apos;m Satvik and this is my space on the internet.
         </h1>
         <div className="w-[80%] text-gray-300">
-          <p>I love simplifying problems and teach people.</p>
+          <p>I love simplifying problems and teaching people.</p>
           <p>
             Trying to write bi-weekly blogs and daily leetcoding explanation,
             honestly should join my discord if you want to be a part of the
