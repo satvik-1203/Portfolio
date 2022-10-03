@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap");
 
@@ -20,7 +22,7 @@
   }
 
   p {
-    @apply my-2 text-sm md:text-lg;
+    @apply my-2 text-sm md:text-base;
   }
 
   .solution h1 {
@@ -84,7 +86,7 @@
 }
 
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Open sans", sans-serif;
 }
 
 .arrow {

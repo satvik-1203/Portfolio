@@ -15,7 +15,7 @@ const Li = ({
   link: string;
 }) => (
   <Link href={link}>
-    <a className="w-full">
+    <a className="w-full text-gray-300">
       <li
         className={`${className}  cursor-pointer transition-all hover:border-2 border-2  border-transparent hover:text-white hover:border-purple-700 px-3 py-1.5 w-full rounded`}
       >

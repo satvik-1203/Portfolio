@@ -5,6 +5,8 @@ import { usePageFade, fade } from "#/hooks/usePageFade";
 import PageTwo from "./PageTwo";
 import Projects from "./Projects";
 import IUpdate from "#/interface/IUpdates";
+import Intro from "./Intro";
+import Contact from "./Contact";
 
 interface Props {
   updates: [IUpdate, IUpdate];
@@ -19,19 +21,23 @@ const Index: React.FC<Props> = ({ updates }) => {
   return (
     <IndexPageContext.Provider value={{ content, setContent }}>
       <section className="relative  px-3">
+        <Intro />
         <motion.div
-          ref={elementOne as any}
-          variants={fade}
-          animate={controlsOne as any}
+          // ref={elementOne as any}
+          // variants={fade}
+          // animate={controlsOne as any}
           className=""
         >
-          <PageOne updates={updates} />
+          {/* <PageOne updates={updates} /> */}
         </motion.div>
         <div className="top_space" id="about">
           <PageTwo />
         </div>
         <div className="top_space" id="projects">
           <Projects />
+        </div>
+        <div id="contacts" className="top_space">
+          <Contact />
         </div>
       </section>
     </IndexPageContext.Provider>
