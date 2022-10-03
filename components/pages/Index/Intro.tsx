@@ -6,7 +6,9 @@ const Intro: React.FC<Props> = () => {
   return (
     <div className="min-h-[80vh] flex justify-center items-center ">
       <div>
-        <h1>Hey there, I'm Satvik and this is my space on the internet.</h1>
+        <h1>
+          Hey there, I&apos;m Satvik and this is my space on the internet.
+        </h1>
         <div className="w-[80%] text-gray-300">
           <p>I love simplifying problems and teach people.</p>
           <p>
