@@ -8,7 +8,7 @@ const Home = ({ updates }: { updates: any }) => {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>Satvik</title>
       </Head>
       <Index updates={updates} />
     </>
