@@ -75,7 +75,30 @@
   .solution code {
     @apply after:content-['\`'] before:content-['\`'] before:text-blue-500 after:text-blue-500 text-blue-400 font-bold;
   }
+
+  .nav_link:hover > div {
+    @apply w-full;
+  }
+
+  .nav_link.active > div {
+    @apply w-full;
+  }
 }
+
+/* .navbar_hidden {
+    @apply bg-transparent;
+  }
+
+  .navbar_show {
+    @apply bg-gray-400 overflow-hidden fixed inset-0;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+     transition: all 1s ease-out; 
+    height: 100vh;
+    width: 100%;
+  } 
+  
+  */
 
 .line-number::before {
   content: attr(line);
