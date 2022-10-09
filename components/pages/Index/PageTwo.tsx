@@ -17,12 +17,12 @@ const PageTwo: React.FC<Props> = () => {
         <p>
           In grade eleven, I remember watching the movie social network inspired
           me to make a web page and start something. Immitedatly after watching
-          the movie, I opened up a tutorial from youtube and clicked 'how to
-          make a web page.' First, I downloaded this weird text editor named
-          bracket. Then made an HTML file. HTML was straightforward. However,
-          getting introduced to CSS was a whole different thing. Linking CSS in
-          HTML files itself was confusing at the time. After a few days, I
-          tended to give up and never coded anything till college.
+          the movie, I opened up a tutorial from youtube and clicked &apos;how
+          to make a web page.&apos; First, I downloaded this weird text editor
+          named bracket. Then made an HTML file. HTML was straightforward.
+          However, getting introduced to CSS was a whole different thing.
+          Linking CSS in HTML files itself was confusing at the time. After a
+          few days, I tended to give up and never coded anything till college.
         </p>
         <p>
           In college, I first met people who knew how to code while I had no
@@ -30,8 +30,8 @@ const PageTwo: React.FC<Props> = () => {
           others writing code and copy-pasting, not understanding any
           statements, just looking at everything as syntax. Every week, for each
           lab, I used to hit up the lab tutors and show them my broken homework
-          while they fixed the code for me. I don't know how long it took; all I
-          could say was that it was the fewest worst times in my life.
+          while they fixed the code for me. I don&apos;t know how long it took;
+          all I could say was that it was the fewest worst times in my life.
         </p>
         <p>
           During the next semester, my professor gave the class a pop quiz, and
