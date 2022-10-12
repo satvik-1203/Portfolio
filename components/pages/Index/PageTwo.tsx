@@ -35,15 +35,15 @@ const PageTwo: React.FC<Props> = () => {
         </p>
         <p>
           During the next semester, my professor gave the class a pop quiz, and
-          surprisingly I was about to do it with no sweat while I saw others
-          struggle. It was then I discovered my passion for coding. I started
-          learning all the concepts the class was going over. After finishing
-          all the topics, I found that data structures are fundamental in CS. I
-          started grinding on them, created each data structure, and solved a
-          few leetcoding problems. Simantinously, I began to read daily news
-          about software engineering. React was a hot topic at the time, and the
-          name caught my mind. Ever since then, I have wanted to get into
-          front-end development.
+          surprisingly I was able to solve the questions no sweat while I saw
+          others struggle. It was then I discovered my passion for coding. I
+          started learning all the concepts the class was going over. After
+          finishing all the topics, I found that data structures are fundamental
+          in CS. I started grinding on them, created each data structure, and
+          solved a few leetcoding problems. Simantinously, I began to read daily
+          news about software engineering. React was a hot topic at the time,
+          and the name caught my mind. Ever since then, I have wanted to get
+          into front-end development.
         </p>
       </div>
       <section>
