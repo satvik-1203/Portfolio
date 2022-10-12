@@ -13,6 +13,8 @@ import Post from "#/components/common/Post";
 
 import { getCache, setCache } from "#/misc/redis";
 import hoursToSeconds from "#/misc/hoursToSeconds";
+import Metadata from "#/misc/MetaData";
+import { useRouter } from "next/router";
 
 interface ServerData {
   html: string;
@@ -22,10 +24,17 @@ interface ServerData {
 }
 
 const question = ({ html, frontmatter }: ServerData) => {
+  const router = useRouter();
   return (
     <>
       <Head>
         <title>{frontmatter.name}</title>
+        <Metadata
+          title={frontmatter.name}
+          path={router.pathname}
+          image={`http://isatvik.com/api/metaTag?type=leetcode&name=${frontmatter.name}&difficulty=${frontmatter.difficulty}&topics=${frontmatter.topics}`}
+          keywords={frontmatter.topics.split(", ")}
+        />
       </Head>
       <div className="page_first">
         <Post code={html} />
