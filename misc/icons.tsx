@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export const Settings = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -38,7 +40,8 @@ export const Hamburger = () => (
 );
 
 export const Arrow = () => (
-  <svg
+  <motion.svg
+    layout
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -51,5 +54,5 @@ export const Arrow = () => (
       strokeLinejoin="round"
       d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
     />
-  </svg>
+  </motion.svg>
 );

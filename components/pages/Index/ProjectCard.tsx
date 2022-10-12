@@ -27,14 +27,14 @@ const ProjectCard: React.FC<Props> = ({ data }) => {
           layout
           className="h-[100px] flex justify-between items-center text-xl text-gray-100 "
         >
-          <div>{title}</div>
-          <div
+          <motion.div layout>{title}</motion.div>
+          <motion.div
             className={`${
               show ? "rotate-180" : "rotate-0"
             } transition-all duration-300 text-gray-300 w-6 h-6`}
           >
             <Arrow />
-          </div>
+          </motion.div>
         </motion.div>
         {show && (
           <motion.div
