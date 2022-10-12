@@ -23,7 +23,7 @@ interface ServerData {
   };
 }
 
-const question = ({ html, frontmatter }: ServerData) => {
+const Question = ({ html, frontmatter }: ServerData) => {
   const router = useRouter();
   return (
     <>
@@ -77,4 +77,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   };
 };
 
-export default question;
+export default Question;
