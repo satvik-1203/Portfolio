@@ -30,11 +30,12 @@ export default async function handler(
           flexDirection: "column",
           color: "white",
           fontFamily: "Open Sans",
+          fontSize: 16 * 2,
         }}
       >
         <h1
           style={{
-            fontSize: "32px",
+            fontSize: "64px",
             fontWeight: "600",
           }}
         >
@@ -68,8 +69,8 @@ export default async function handler(
         </div>
       </div>,
       {
-        width: 600,
-        height: 337.5,
+        width: 1028,
+        height: 539,
         fonts: [
           {
             name: "Open sans",
