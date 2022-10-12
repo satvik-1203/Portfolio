@@ -87,6 +87,7 @@ export default async function handler(
       }
     );
 
+    res.setHeader("Content-Type", "image/svg+xml");
     return res.status(200).send(svg);
   }
 
