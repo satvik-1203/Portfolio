@@ -116,7 +116,7 @@ function Metadata({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <meta name="twitter:image:alt" content="og:image" />
-      <meta name="twitter:card" content="large_image" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       {/* <meta name='twitter:creator' content='@username' /> */}
       {/* apple splash screen images (optional) */}
