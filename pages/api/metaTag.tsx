@@ -30,11 +30,12 @@ export default async function handler(
           flexDirection: "column",
           color: "white",
           fontFamily: "Open Sans",
+          fontSize: "24px",
         }}
       >
         <h1
           style={{
-            fontSize: "32px",
+            fontSize: "48px",
             fontWeight: "600",
           }}
         >
