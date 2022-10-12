@@ -24,7 +24,7 @@ export default async function handler(
           height: "100%",
           width: "100%",
           backgroundColor: "#111827",
-          padding: "1rem 3rem",
+          padding: ".5rem 3rem",
           position: "relative",
           display: "flex",
           flexDirection: "column",
