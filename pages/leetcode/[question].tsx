@@ -30,7 +30,10 @@ const Question = ({ html, frontmatter }: ServerData) => {
       <Metadata
         title={frontmatter.name}
         path={router.asPath}
-        image={`https://isatvik.com/api/metaTag?type=leetcode&name=${frontmatter.name}&difficulty=${frontmatter.difficulty}&topics=${frontmatter.topics}`}
+        image={`https://isatvik.com/api/metaTag?type=leetcode&name=${frontmatter.name}&difficulty=${frontmatter.difficulty}&topics=${frontmatter.topics}`.replaceAll(
+          " ",
+          "%20"
+        )}
         keywords={frontmatter.topics.split(", ")}
       />
       <div className="page_first">
