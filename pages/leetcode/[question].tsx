@@ -27,15 +27,12 @@ const Question = ({ html, frontmatter }: ServerData) => {
   const router = useRouter();
   return (
     <>
-      <Head>
-        <title>{frontmatter.name}</title>
-        <Metadata
-          title={frontmatter.name}
-          path={router.pathname}
-          image={`http://isatvik.com/api/metaTag?type=leetcode&name=${frontmatter.name}&difficulty=${frontmatter.difficulty}&topics=${frontmatter.topics}`}
-          keywords={frontmatter.topics.split(", ")}
-        />
-      </Head>
+      <Metadata
+        title={frontmatter.name}
+        path={router.asPath}
+        image={`http://isatvik.com/api/metaTag?type=leetcode&name=${frontmatter.name}&difficulty=${frontmatter.difficulty}&topics=${frontmatter.topics}`}
+        keywords={frontmatter.topics.split(", ")}
+      />
       <div className="page_first">
         <Post code={html} />
       </div>
