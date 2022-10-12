@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@resvg/resvg-js": "^2.1.0",
     "@silvenon/remark-smartypants": "^2.0.0",
     "@upstash/redis": "^1.13.1",
-    "@vercel/og": "^0.0.17",
     "axios": "^0.27.2",
     "esbuild": "^0.15.7",
     "framer-motion": "^6.2.8",

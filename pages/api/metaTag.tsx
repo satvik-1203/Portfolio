@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from "next/types";
 import React from "react";
 import satori from "satori";
 import fs from "fs";
+import { Resvg } from "@resvg/resvg-js";
 
 const openSans = fs.readFileSync(process.cwd() + "/fonts/OpenSans-Regular.ttf");
 const openSansSemiBold = fs.readFileSync(
@@ -24,7 +25,6 @@ export default async function handler(
           width: "100%",
           backgroundColor: "#111827",
           padding: "1rem 3rem",
-          borderRadius: "10px",
           position: "relative",
           display: "flex",
           flexDirection: "column",
@@ -87,8 +87,9 @@ export default async function handler(
       }
     );
 
-    res.setHeader("Content-Type", "image/svg+xml");
-    return res.status(200).send(svg);
+    res.setHeader("Content-Type", "image/png");
+    const resvg = new Resvg(svg, {});
+    return res.status(200).send(resvg.render().asPng());
   }
 
   res.status(404).send("");
