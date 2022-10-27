@@ -48,7 +48,7 @@
     @apply text-blue-600;
   }
   .solution > * {
-    @apply text-base w-[85%]  md:text-lg xl:text-xl leading-[1.6rem] md:leading-[1.8rem] xl:leading-[2rem] text-gray-100;
+    @apply text-base w-[85%]  leading-[1.6rem] md:leading-[1.8rem]  text-gray-100;
     margin-left: auto !important;
     margin-right: auto !important;
   }
