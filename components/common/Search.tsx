@@ -31,7 +31,7 @@ const Search: React.FC<Props> = ({ data, setData, keys }) => {
           type="text"
           className={`px-6 py-4 bg-gray-900 rounded border-transparent 
           border-2 focus:border-purple-700 outline-none text-gray-200
-          w-[80%] 
+          md:w-[80%] w-full
           `}
           placeholder="Name / Topics / Difficulty"
           onChange={onChange}
