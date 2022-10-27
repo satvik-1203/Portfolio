@@ -7,7 +7,7 @@ interface Props {
   questions: ICard[];
 }
 
-const index: React.FC<Props> = ({ questions }) => {
+const Index: React.FC<Props> = ({ questions }) => {
   // console.log(questions[0]);
 
   const [stateQuestions, setQuestions] = useState(questions);
@@ -31,4 +31,4 @@ const index: React.FC<Props> = ({ questions }) => {
   );
 };
 
-export default index;
+export default Index;

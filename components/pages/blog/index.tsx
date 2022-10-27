@@ -6,7 +6,7 @@ interface Props {
   blogs: IBlog[];
 }
 
-const index: React.FC<Props> = ({ blogs }) => {
+const Index: React.FC<Props> = ({ blogs }) => {
   return (
     <section className="page_first">
       <h1>Blogs</h1>
@@ -19,4 +19,4 @@ const index: React.FC<Props> = ({ blogs }) => {
   );
 };
 
-export default index;
+export default Index;
