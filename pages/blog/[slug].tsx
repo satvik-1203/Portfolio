@@ -40,7 +40,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
   const key = `blog-${filename}`;
 
-  let content = (await getCache(key)) as string;
+  let content =
+    process.env.NODE_ENV == "development"
+      ? undefined
+      : ((await getCache(key)) as string);
 
   if (!content) {
     try {
@@ -51,7 +54,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
       };
     }
 
-    setCache(key, content);
+    if (process.env.NODE_ENV != "development") setCache(key, content);
   }
 
   const { frontmatter, html } = await bundleMDX(content);
