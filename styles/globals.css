@@ -80,13 +80,13 @@
     @apply after:content-['\`'] before:content-['\`'] before:text-blue-500 after:text-blue-500 text-blue-400 font-bold;
   }
 
-  .nav_link:hover > div {
+  /* .nav_link:hover > div {
     @apply w-full;
   }
 
   .nav_link.active > div {
     @apply w-full;
-  }
+  } */
 }
 
 /* .navbar_hidden {
