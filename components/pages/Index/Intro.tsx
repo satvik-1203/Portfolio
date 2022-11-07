@@ -5,7 +5,7 @@ interface Props {}
 
 const Intro: React.FC<Props> = () => {
   return (
-    <div className=" flex justify-center items-center space-x-4">
+    <div className=" flex  justify-center items-center space-x-4">
       <div>
         <h1>Hey there, I&apos;m Satvik.</h1>
         <div className="w-[80%] text-gray-300">
@@ -18,7 +18,9 @@ const Intro: React.FC<Props> = () => {
           </p>
         </div>
       </div>
-      <Image src={"/images/jett1.png"} width="560" height="1473" />
+      <div className="hidden md:block">
+        <Image src={"/images/jett1.png"} width="560" height="1473" />
+      </div>
     </div>
   );
 };
