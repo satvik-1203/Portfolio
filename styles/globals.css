@@ -8,6 +8,11 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap");
 
+html {
+  --trackingWidth: 0.025em;
+  --baseTextSize: 16px;
+}
+
 @layer components {
   body {
     @apply bg-gray-900  bg-gradient-to-tl from-gray-800 text-white;
@@ -22,33 +27,51 @@
   }
 
   p {
-    @apply my-2 text-sm md:text-base;
+    @apply my-2;
+
+    font-size: var(--baseTextSize);
+    line-height: 1.6em;
   }
 
   .solution h1 {
-    @apply text-blue-500  pb-3 text-3xl md:text-4xl;
+    @apply text-blue-500  pb-3;
+    font-size: calc(var(--baseTextSize) + 22px);
+    line-height: 1.8em;
   }
+
   h1 {
-    @apply text-3xl md:text-4xl my-4;
+    @apply text-4xl my-4;
+    font-size: calc(var(--baseTextSize) + 22px);
+    line-height: 1.8em;
   }
 
   h2 {
-    @apply text-2xl md:text-3xl;
+    @apply text-3xl;
+    font-size: calc(var(--baseTextSize) + 14px);
+    line-height: 1em;
   }
   .solution h2 {
-    @apply text-blue-500 text-2xl md:text-3xl;
+    @apply text-blue-500;
+    font-size: calc(var(--baseTextSize) + 14px);
+    line-height: 1em;
   }
   .solution h3 {
-    @apply text-blue-500 text-lg  md:text-xl;
+    @apply text-blue-500;
+    font-size: calc(var(--baseTextSize) + 8px) !important;
+    line-height: 1.5em;
   }
+
   h3 {
-    @apply text-lg text-white md:text-xl;
+    @apply text-white text-xl;
+    font-size: calc(var(--baseTextSize) + 8px) !important;
+    line-height: 1.5em;
   }
   .solution strong {
     @apply text-blue-600;
   }
   .solution > * {
-    @apply text-base w-[85%]  leading-[1.6rem] md:leading-[1.8rem]  text-gray-100;
+    @apply w-[85%]  leading-[1.6em]  text-gray-100;
+    font-size: var(--baseTextSize);
     margin-left: auto !important;
     margin-right: auto !important;
   }
@@ -58,7 +81,9 @@
   }
 
   .solution pre code {
-    @apply font-light leading-7 text-base tracking-widest w-full text-gray-300 after:content-[''] before:content-[''];
+    @apply font-light   w-full text-gray-300 after:content-[''] before:content-[''];
+
+    line-height: 2em;
   }
 
   .solution pre code span {
@@ -99,11 +124,15 @@
   }
   input[type="range"]::-moz-range-thumb {
     border: none; /*Removes extra border that FF applies*/
-    border-radius: 0; /*Removes default border-radius that FF applies*/
-    background-color: #263e42;
-    height: 2rem;
-    width: 1rem;
+    border-radius: 9999px; /*Removes default border-radius that FF applies*/
+    background-color: #fff;
+    height: 18rem;
+    width: 18rem;
   }
+}
+
+* {
+  letter-spacing: var(--trackingWidth);
 }
 
 /* .navbar_hidden {
@@ -172,8 +201,8 @@
 }
 .solution h1 {
   font-weight: bold;
-  margin: 2.5rem 0;
   border-bottom: 1px solid #7a7a7a;
+  margin-bottom: 3rem;
 }
 .solution h2 {
   font-weight: bold;
@@ -191,6 +220,7 @@
 .solution pre code {
   background: transparent;
   font-family: "Noto Sans Mono", monospace;
+  font-size: var(--baseTextSize);
 
   /* text-decoration: none; */
 }

@@ -1,12 +1,53 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface Props {}
 
+interface ISettings {
+  theme: "Dark" | "Light";
+  tracking: "Wide" | "Wider" | "Widest";
+  fontSize: number;
+}
+
 const Settings: React.FC<Props> = () => {
-  const [fontSize, setFontSize] = useState(16);
+  const [settings, setSettings] = useState<ISettings>({
+    theme: "Dark",
+    tracking: "Wide",
+    fontSize: 16,
+  });
+
+  const rootRef = useRef<HTMLDivElement>();
+
+  const { fontSize, theme, tracking } = settings;
+
+  useEffect(() => {
+    let localStorageSettings = localStorage.getItem("settings");
+
+    if (!localStorageSettings) return;
+    setSettings(JSON.parse(localStorageSettings) as ISettings);
+
+    rootRef.current = document.querySelector(":root")! as HTMLDivElement;
+  }, []);
+
+  useEffect(() => {
+    let width = ".025em";
+    if (tracking == "Wider") width = ".05em";
+    if (tracking == "Widest") width = ".1em";
+
+    rootRef.current!.style.setProperty("--trackingWidth", width);
+  }, [tracking]);
+
+  useEffect(() => {
+    rootRef.current!.style.setProperty("--baseTextSize", fontSize + "px");
+  }, [fontSize]);
+
+  const onSettingsChange = (property: Partial<ISettings>) => {
+    const newSettings = { ...settings, ...property };
+    setSettings(newSettings);
+    localStorage.setItem("settings", JSON.stringify(newSettings));
+  };
 
   return (
-    <div className="settings relative py-2 pl-8">
+    <div className="settings relative py-2 pl-8 ">
       <div className="cursor-pointer">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -30,44 +71,57 @@ const Settings: React.FC<Props> = () => {
       </div>
       <div className="options hidden absolute top-9 bg-gray-900 rounded shadow-lg px-8 py-4 right-0 tracking-wider z-10  flex-col space-y-4">
         <div>
-          <div>Themes</div>
+          <div>Theme</div>
           <ul className="flex space-x-4 my-2 text-sm text-gray-400">
-            <li className="px-4 py-2 bg-gray-800 rounded transition-all cursor-pointer text-white">
-              Dark
-            </li>
-
-            <li className="px-4 py-2 hover:bg-gray-800 rounded transition-all cursor-pointer  hover:text-white">
-              Light
-            </li>
+            <Option
+              name="Light"
+              active={theme == "Light"}
+              onClick={onSettingsChange}
+              property="theme"
+            />
+            <Option
+              name="Dark"
+              active={theme == "Dark"}
+              onClick={onSettingsChange}
+              property="theme"
+            />
           </ul>
         </div>
         <div>
           <div>Tracking</div>
           <ul className="flex space-x-4 my-2 text-sm text-gray-400">
-            <li className="px-4 py-2 hover:bg-gray-800 rounded transition-all cursor-pointer  hover:text-white">
-              Wide
-            </li>
-
-            <li className="px-4 py-2 bg-gray-800 rounded transition-all cursor-pointer  text-white">
-              Wider
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-800 rounded transition-all cursor-pointer  hover:text-white">
-              Widest
-            </li>
+            <Option
+              name="Wide"
+              active={tracking == "Wide"}
+              onClick={onSettingsChange}
+              property="tracking"
+            />
+            <Option
+              name="Wider"
+              active={tracking == "Wider"}
+              onClick={onSettingsChange}
+              property="tracking"
+            />
+            <Option
+              name="Widest"
+              active={tracking == "Widest"}
+              onClick={onSettingsChange}
+              property="tracking"
+            />
           </ul>
         </div>
         <div>
-          <div>Font Size</div>
+          <div>Reading Size</div>
           <div className="px-4 py-2 flex justify-center items-center space-x-4">
             <div>{fontSize}&nbsp;px</div>
             <input
               type="range"
               name="fontSize"
               min="14"
-              max="32"
+              max="22"
               defaultValue={16}
               className="w-full appearance-none bg-gray-800 rounded h-2 cursor-pointer "
-              onChange={(e) => setFontSize(+e.target.value)}
+              onChange={(e) => onSettingsChange({ fontSize: +e.target.value })}
             />
           </div>
         </div>
@@ -77,3 +131,25 @@ const Settings: React.FC<Props> = () => {
 };
 
 export default Settings;
+
+const Option: React.FC<{
+  active: boolean;
+  name: string;
+  onClick: (property: Partial<ISettings>) => void;
+  property: keyof ISettings;
+}> = ({ active, name, onClick, property }) => {
+  return (
+    <li
+      className={`px-4 py-2  rounded transition-all cursor-pointer   ${
+        active
+          ? "bg-gray-700 text-white"
+          : "hover:bg-gray-800 hover:text-gray-300"
+      }`}
+      onClick={() => {
+        onClick({ [property]: name });
+      }}
+    >
+      {name}
+    </li>
+  );
+};
