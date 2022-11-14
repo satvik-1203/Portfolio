@@ -87,6 +87,23 @@
   .nav_link.active > div {
     @apply w-full;
   } */
+
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+
+    height: 18px;
+    width: 18px;
+
+    @apply rounded-full bg-white transition-all;
+  }
+  input[type="range"]::-moz-range-thumb {
+    border: none; /*Removes extra border that FF applies*/
+    border-radius: 0; /*Removes default border-radius that FF applies*/
+    background-color: #263e42;
+    height: 2rem;
+    width: 1rem;
+  }
 }
 
 /* .navbar_hidden {
@@ -202,24 +219,8 @@
   font-weight: bold;
 }
 
-.index_container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  overflow-x: visible;
-  height: 100vh;
-  scroll-behavior: smooth;
-}
-
-.index_container .section_start {
-  scroll-snap-align: start;
-  padding-top: 8rem;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
   scrollbar-width: thin !important;
   scrollbar-width: 5px;
   overflow-x: hidden;
@@ -259,4 +260,8 @@ html {
 
 .page_first {
   padding-top: 7rem;
+}
+
+.settings:hover .options {
+  display: flex;
 }
