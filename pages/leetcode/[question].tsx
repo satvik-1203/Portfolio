@@ -46,20 +46,12 @@ const Question = ({ html, frontmatter }: ServerData) => {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const filename = ctx.params!.question as string;
 
-  const key = `leetcode-${filename}`;
-
-  let content = (await getCache(key)) as string;
+  let content = await getPostForLeetCode(filename);
 
   if (!content) {
-    try {
-      content = await getPostForLeetCode(filename);
-    } catch {
-      return {
-        notFound: true,
-      };
-    }
-
-    setCache(key, content);
+    return {
+      notFound: true,
+    };
   }
 
   const { frontmatter, html } = await bundleMDX(content);

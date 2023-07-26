@@ -38,23 +38,12 @@ const slug = ({ frontmatter, html }: Props) => {
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const filename = ctx.params!.slug as string;
 
-  const key = `blog-${filename}`;
-
-  let content =
-    process.env.NODE_ENV == "development"
-      ? undefined
-      : ((await getCache(key)) as string);
+  let content = await getBlog(filename);
 
   if (!content) {
-    try {
-      content = await getBlog(filename);
-    } catch {
-      return {
-        notFound: true,
-      };
-    }
-
-    if (process.env.NODE_ENV != "development") setCache(key, content);
+    return {
+      notFound: true,
+    };
   }
 
   const { frontmatter, html } = await bundleMDX(content);
