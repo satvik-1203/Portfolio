@@ -39,7 +39,7 @@
     "title": "Wayfinder",
     "description": [
       "An alumni network for GSU to connect current undergrad students with alumni's",
-      "Used Google Maps API, NextJs, AWS dynomoDB, supabase, Qualtrics surveys,and linkedin integration."
+      "Used Google Maps API, NextJs, AWS dynomoDB, supabase, Qualtrics surveys."
     ],
     "links": [
       {
